@@ -6,22 +6,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: "微軟正黑體", sans-serif; background: #f8f8f8; margin: 0; }
-    .banner-area {
-      width: 100%;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 0;
-      box-shadow: 0 4px 18px #0001;
-    }
-    .banner-area img {
-      width: 100%;
-      max-width: 1200px;
-      height: auto;
-      display: block;
-      border-radius: 0 0 24px 24px;
-    }
+   .banner-area {
+  width: 100vw;
+  min-width: 100vw;
+  background: #fff;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 4px 18px #0001;
+  display: block;
+}
+.banner-area img {
+  width: 100vw;
+  min-width: 100vw;
+  height: auto;          /* 高度自動，保留原比例 */
+  border-radius: 0 0 24px 24px;
+  display: block;
+  margin: 0 auto;
+}
+@media (max-width: 700px) {
+  .banner-area img {
+    height: 24vw;
+    border-radius: 0 0 8vw 8vw;
+  }
+}
+
     nav {
       text-align: center;
       margin-top: 0;
