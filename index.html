@@ -34,6 +34,43 @@
   </style>
 </head>
 <body>
+  <!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>首頁圖片展示</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { background: #f8f8f8; margin: 0; font-family: "微軟正黑體", sans-serif; }
+    .main-img-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 48px 0 24px 0;
+      background: #f8f8f8;
+    }
+    .main-img-area img {
+      max-width: 96vw;
+      width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 8px 36px #0003;
+      border: 3px solid #fff;
+      background: #fff;
+    }
+    @media (max-width: 600px) {
+      .main-img-area img {
+        width: 98vw;
+        max-width: 99vw;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main-img-area">
+    <img src="008.jpg" alt="首頁主圖">
+  </div>
+</body>
+</html>
   <nav>
     <button class="tab active" data-page="home">首頁</button>
     <button class="tab" data-page="about">品牌介紹</button>
