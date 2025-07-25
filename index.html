@@ -70,23 +70,23 @@
     .page.active { display: block; }
 
 @media (max-width: 700px) {
+  .banner-area img {
+    border-radius: 0 0 8vw 8vw;
+  }
   nav {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    overflow-x: auto;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
+    display: block;
+    text-align: center;
     padding-bottom: 1px;
   }
   nav button {
-    font-size: 0.98em;
-    padding: 12px 12px;
-    margin: 0 2px;
-    min-width: 78px;
-    flex: 0 0 auto;
-    white-space: nowrap;
+    font-size: 1em;
+    padding: 12px 8px;
+    margin: 4px 2px;
+    min-width: 0;
+    white-space: normal;
+    flex: none;
   }
+  .page { padding: 8vw 4vw; margin-top: 6vw; }
 }
     
 
