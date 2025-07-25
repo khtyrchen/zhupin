@@ -8,20 +8,36 @@
     body { font-family: "微軟正黑體", sans-serif; background: #f8f8f8; margin: 0; }
    .banner-area {
   width: 100vw;
+  height: 220px;  /* 桌機高度 */
   background: #fff;
+  box-shadow: 0 4px 18px #0001;
   overflow: hidden;
   padding: 0;
   margin: 0;
-  box-shadow: 0 4px 18px #0001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .banner-area img {
-  width: 100%;
-  height: auto;
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
   display: block;
   border-radius: 0 0 24px 24px;
   margin: 0 auto;
-  max-width: 100vw;
 }
+@media (max-width: 700px) {
+  .banner-area {
+    height: 220px; /* 手機高度 */
+  }
+}
+
+@media (max-width: 700px) {
+  .banner-area {
+    height: 80px;  /* 手機時banner高度 */
+  }
+}
+
 
 @media (max-width: 700px) {
   .banner-area img {
