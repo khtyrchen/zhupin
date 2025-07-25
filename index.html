@@ -68,16 +68,28 @@
     }
     .page { display: none; max-width: 900px; background: #fff; margin: 40px auto 0; padding: 36px 32px; border-radius: 16px; box-shadow: 0 2px 14px #0001; }
     .page.active { display: block; }
-    @media (max-width: 700px) {
-      .banner-area img {
-        border-radius: 0 0 8vw 8vw;
-      }
-      nav button {
-        font-size: 1em;
-        padding: 12px 8px;
-      }
-      .page { padding: 8vw 4vw; margin-top: 6vw; }
-    }
+
+@media (max-width: 700px) {
+  nav {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1px;
+  }
+  nav button {
+    font-size: 0.98em;
+    padding: 12px 12px;
+    margin: 0 2px;
+    min-width: 78px;
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+}
+    
+
 html {
   scroll-behavior: smooth; /* 瀏覽器自動平滑滾動 */
 }
