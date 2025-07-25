@@ -2,73 +2,74 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
-  <title>竹拼｜客製積木畫與雷雕手作</title>
+  <title>我的品牌網站</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
-    body {
-      font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
-      background: #f8f8f8;
-      margin: 0;
-      color: #222;
-    }
-    .banner {
-      background: url('wooden_banner_2560x423.png') center center/cover no-repeat;
-      min-height: 240px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-end;
-      padding-top: 70px;
-      padding-bottom: 40px;
-    }
+    body { font-family: "微軟正黑體", sans-serif; background: #f8f8f8; margin: 0; }
     nav {
       text-align: center;
-      margin: 0 0 40px 0;
-    }
-    .tab {
-      display: inline-block;
-      margin: 0 16px;
-      padding: 10px 24px;
-      background: #f3f3f3;
-      border-radius: 20px 20px 0 0;
-      font-weight: bold;
-      color: #35512d;
-      cursor: pointer;
-      border: none;
-      outline: none;
-      font-size: 1.1rem;
-      transition: background 0.2s;
-    }
-    .tab.active {
-      background: #be873b;
-      color: #fff;
-    }
-    .content-section {
-      display: none;
-      max-width: 900px;
+      margin-top: 20px;
       background: #fff;
-      margin: 0 auto;
-      border-radius: 24px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-      padding: 36px 32px;
-      animation: fadeIn 0.5s;
+      border-bottom: 1px solid #ddd;
     }
-    .content-section.active {
-      display: block;
+    nav button {
+      background: none;
+      border: none;
+      font-size: 1.1rem;
+      padding: 18px 32px;
+      margin: 0 8px;
+      color: #333;
+      cursor: pointer;
+      border-bottom: 3px solid transparent;
+      font-weight: bold;
+      letter-spacing: 2px;
+      transition: border-bottom .2s;
     }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
+    nav button.active {
+      border-bottom: 3px solid #be873b;
+      color: #be873b;
     }
+    .page { display: none; max-width: 900px; background: #fff; margin: 40px auto 0; padding: 36px 32px; border-radius: 16px; box-shadow: 0 2px 14px #0001; }
+    .page.active { display: block; }
   </style>
 </head>
 <body>
-  <div class="banner"></div>
   <nav>
-    <button class="tab active" data-tab="home">首頁</button>
-    <button class="tab" data-tab="about">品牌故事</button>
-    <button class="tab" data-tab="products">商品介紹</button>
-    <button class="tab" data-tab="contact">聯絡我們</button>
+    <button class="tab active" data-page="home">首頁</button>
+    <button class="tab" data-page="about">品牌介紹</button>
+    <button class="tab" data-page="products">商品介紹</button>
+    <button class="tab" data-page="contact">聯絡我們</button>
   </nav>
 
-  <!--
+  <div id="home" class="page active">
+    <h1>歡迎來到我的品牌！</h1>
+    <p>這裡是首頁內容。</p>
+  </div>
+  <div id="about" class="page">
+    <h1>品牌介紹</h1>
+    <p>這裡介紹你的品牌理念、故事。</p>
+  </div>
+  <div id="products" class="page">
+    <h1>商品介紹</h1>
+    <p>這裡可以放商品照片、說明。</p>
+  </div>
+  <div id="contact" class="page">
+    <h1>聯絡我們</h1>
+    <p>這裡可以放聯絡方式、表單、LINE連結。</p>
+  </div>
+
+  <script>
+    // 分頁切換功能
+    const tabs = document.querySelectorAll('.tab');
+    const pages = document.querySelectorAll('.page');
+    tabs.forEach(tab => {
+      tab.onclick = function() {
+        tabs.forEach(t => t.classList.remove('active'));
+        pages.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.page).classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
