@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: "微軟正黑體", sans-serif; background: #f8f8f8; margin: 0; }
-  .banner-area {
+.banner-area {
   width: 100%;
   background: #fff;
   box-shadow: 0 4px 18px #0001;
@@ -15,35 +15,33 @@
   align-items: center;
   padding: 0;
   margin: 0;
+  overflow: hidden; /* 超出的部分隱藏 */
 }
+
 .banner-area img {
   width: 100%;
-  max-width: 1200px; /* 最大寬度你可調整 */
+  max-width: 1200px;
   height: auto;
   display: block;
   margin: 0 auto;
   border-radius: 0 0 24px 24px;
+  transition: all 0.2s;
 }
 
-@media (max-width: 700px) {
+/* 手機版，固定高度並裁切 */
+@media (max-width: 600px) {
   .banner-area {
-    height: 220px; /* 手機高度 */
+    height: 90px;         /* 你想要的手機橫幅高度 */
+    min-height: 60px;
   }
-}
-
-@media (max-width: 700px) {
-  .banner-area {
-    height: 80px;  /* 手機時banner高度 */
-  }
-}
-
-
-@media (max-width: 700px) {
   .banner-area img {
-    height: 24vw;
-    border-radius: 0 0 8vw 8vw;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;    /* 裁切中間主視覺 */
   }
 }
+
 
     nav {
       text-align: center;
