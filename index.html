@@ -78,6 +78,68 @@
       }
       .page { padding: 8vw 4vw; margin-top: 6vw; }
     }
+html {
+  scroll-behavior: smooth; /* 瀏覽器自動平滑滾動 */
+}
+.subnav {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.subnav .subtab {
+  background: #f8f8f8;
+  border: none;
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 0 4px;
+  color: #333;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  font-weight: bold;
+  border-radius: 20px 20px 0 0;
+  transition: border-bottom .2s, color .2s, background .2s;
+  display: inline-block;
+  text-decoration: none;
+}
+.subnav .subtab:hover,
+.subnav .subtab:focus {
+  background: #be873b;
+  color: #fff;
+  border-bottom: 2px solid #be873b;
+}
+.subsection {
+  margin-bottom: 36px;
+  padding: 16px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+#backToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 36px;
+  z-index: 99;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #be873b;
+  color: #fff;
+  font-size: 1.8em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0002;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  display: none; /* 一開始不顯示 */
+}
+#backToTop:hover {
+  opacity: 1;
+  background: #c69445;
+}
+@media (max-width: 600px) {
+  #backToTop { width: 38px; height: 38px; font-size: 1.2em; bottom: 18px; right: 8px; }
+}
+
+
   </style>
 </head>
 <body>
@@ -87,28 +149,47 @@
   </div>
 
   <nav>
-    <button class="tab active" data-page="home">首頁</button>
-    <button class="tab" data-page="about">品牌故事</button>
-    <button class="tab" data-page="products">商品介紹</button>
-    <button class="tab" data-page="contact">聯絡我們</button>
-  </nav>
+  <button class="tab active" data-page="home">首頁</button>
+  <button class="tab" data-page="products">產品介紹</button>
+  <button class="tab" data-page="faq">FQA</button>
+  <button class="tab" data-page="info">購買須知</button>
+  <button class="tab" data-page="contact">聯絡我們</button>
+</nav>
 
-  <div id="home" class="page active">
-    <h1>歡迎來到我的品牌！</h1>
-    <p>這裡是首頁內容。</p>
+<div id="home" class="page active">
+  <h1>歡迎來到我的品牌！</h1>
+  <p>這裡是首頁內容。</p>
+</div>
+<div id="products" class="page">
+  <h1>產品介紹</h1>
+  <div class="subnav">
+    <a href="#mosaic" class="subtab">積木畫</a>
+    <a href="#keychain" class="subtab">木鑰匙圈</a>
+    <a href="#lamp" class="subtab">雷雕夜燈</a>
+    <a href="#bracelet" class="subtab">不鏽鋼手鍊</a>
+    <a href="#other" class="subtab">其他商品</a>
   </div>
-  <div id="about" class="page">
-    <h1>品牌故事</h1>
-    <p>這裡介紹你的品牌理念、經營過程。</p>
+  <div id="mosaic" class="subsection">
+    <h2>積木畫</h2>
+    <p>這裡放積木畫介紹</p>
   </div>
-  <div id="products" class="page">
-    <h1>商品介紹</h1>
-    <p>這裡可以放商品照片、說明。</p>
+  <div id="keychain" class="subsection">
+    <h2>木鑰匙圈</h2>
+    <p>這裡放木鑰匙圈介紹</p>
   </div>
-  <div id="contact" class="page">
-    <h1>聯絡我們</h1>
-    <p>這裡可以放聯絡方式、表單、LINE 連結。</p>
+  <div id="lamp" class="subsection">
+    <h2>雷雕夜燈</h2>
+    <p>這裡放夜燈介紹</p>
   </div>
+  <div id="bracelet" class="subsection">
+    <h2>不鏽鋼手鍊</h2>
+    <p>這裡放手鍊介紹</p>
+  </div>
+  <div id="other" class="subsection">
+    <h2>其他商品</h2>
+    <p>這裡放其他商品介紹</p>
+  </div>
+</div>
 
   <script>
     // 分頁切換功能
@@ -123,5 +204,20 @@
       }
     });
   </script>
+
+<button id="backToTop" title="回到最上面">↑</button>
+<script>
+  // 顯示/隱藏回到最上頁按鈕
+  window.onscroll = function() {
+    document.getElementById("backToTop").style.display =
+      (document.documentElement.scrollTop || document.body.scrollTop) > 120 ? "block" : "none";
+  };
+  // 點擊回到頂部
+  document.getElementById("backToTop").onclick = function() {
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+</script>
+
+
 </body>
 </html>
