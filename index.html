@@ -6,9 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body { font-family: "微軟正黑體", sans-serif; background: #f8f8f8; margin: 0; }
+    .banner-area {
+      width: 100%;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0;
+      box-shadow: 0 4px 18px #0001;
+    }
+    .banner-area img {
+      width: 100%;
+      max-width: 1200px;
+      height: auto;
+      display: block;
+      border-radius: 0 0 24px 24px;
+    }
     nav {
       text-align: center;
-      margin-top: 20px;
+      margin-top: 0;
       background: #fff;
       border-bottom: 1px solid #ddd;
     }
@@ -31,12 +47,27 @@
     }
     .page { display: none; max-width: 900px; background: #fff; margin: 40px auto 0; padding: 36px 32px; border-radius: 16px; box-shadow: 0 2px 14px #0001; }
     .page.active { display: block; }
+    @media (max-width: 700px) {
+      .banner-area img {
+        border-radius: 0 0 8vw 8vw;
+      }
+      nav button {
+        font-size: 1em;
+        padding: 12px 8px;
+      }
+      .page { padding: 8vw 4vw; margin-top: 6vw; }
+    }
   </style>
 </head>
 <body>
+  <!-- 橫幅 Banner 圖片，會永遠顯示在最上方 -->
+  <div class="banner-area">
+    <img src="008.png" alt="網站橫幅">
+  </div>
+
   <nav>
     <button class="tab active" data-page="home">首頁</button>
-    <button class="tab" data-page="about">品牌介紹</button>
+    <button class="tab" data-page="about">品牌故事</button>
     <button class="tab" data-page="products">商品介紹</button>
     <button class="tab" data-page="contact">聯絡我們</button>
   </nav>
@@ -46,8 +77,8 @@
     <p>這裡是首頁內容。</p>
   </div>
   <div id="about" class="page">
-    <h1>品牌介紹</h1>
-    <p>這裡介紹你的品牌理念、故事。</p>
+    <h1>品牌故事</h1>
+    <p>這裡介紹你的品牌理念、經營過程。</p>
   </div>
   <div id="products" class="page">
     <h1>商品介紹</h1>
@@ -55,7 +86,7 @@
   </div>
   <div id="contact" class="page">
     <h1>聯絡我們</h1>
-    <p>這裡可以放聯絡方式、表單、LINE連結。</p>
+    <p>這裡可以放聯絡方式、表單、LINE 連結。</p>
   </div>
 
   <script>
