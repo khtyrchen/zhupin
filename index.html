@@ -224,6 +224,18 @@
 }
 
     html { scroll-behavior: smooth; }
+  
+ /* 全部分頁（.page）內容手機圖＆影片滿版鋪滿螢幕 */
+@media (max-width: 600px) {
+  .page img, .page video {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(-50vw + 50%);
+    border-radius: 0;
+  }
+}
+
+
   </style>
 </head>
 <body>
