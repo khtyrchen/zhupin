@@ -203,7 +203,16 @@ html {
   background: transparent;
 }
 @media (max-width: 600px) {
-  #floatLineBtn { width: 38px; height: 38px; bottom: 66px; font-size: 1.3em;}
+  #backToTop {
+    right: 8px;
+    bottom: 18px;
+    width: 38px; height: 38px;
+  }
+  #floatLineBtn {
+    right: 8px;
+    bottom: 66px;  /* 跟 #backToTop 保持距離 */
+    width: 38px; height: 38px;
+  }
 }
 
   </style>
