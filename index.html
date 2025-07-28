@@ -172,56 +172,56 @@
       }
     }
 
-    /* 浮動按鈕區: 回到頂部、LINE 聯絡 */
-    #backToTop, #floatLineBtn {
-      position: fixed;
-      right: 20px;
-      z-index: 99;
-      width: 48px;
-      height: 48px;
-      border: none;
-      border-radius: 50%;
-      background: rgba(190, 135, 59, 0.87); /* 半透明咖啡色 */
-      color: #fff;
-      font-size: 1.8em;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 2px 8px #0002;
-      opacity: 0.7;
-      transition: opacity 0.2s, background 0.2s;
-      display: none; /* 預設不顯示，JS 控制 */
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(1.5px);
-    }
-    #floatLineBtn { /* 調整在回頂鈕上方 */
-      bottom: 90px;
-      display: block;   /* 預設顯示 */
-    }
-    #backToTop { bottom: 36px; }
-    #backToTop:hover, #floatLineBtn:hover {
-      opacity: 1;
-      background: rgba(198,148,69,0.97);
-    }
-    #floatLineBtn img {
-      width: 60%; height: 60%;
-      vertical-align: middle;
-      display: block;
-      margin: 0 auto;
-      filter: drop-shadow(0 1px 2px #0002);
-      pointer-events: none;
-    }
-    /* 手機版浮動按鈕縮小 */
-    @media (max-width: 600px) {
-      #backToTop {
-        width: 38px; height: 38px; font-size: 1.2em; bottom: 18px; right: 8px;
-      }
-      #floatLineBtn {
-        right: 8px;
-        bottom: 66px;
-        width: 38px; height: 38px; font-size: 1.2em;
-      }
-    }
+/* 浮動按鈕區: 回到頂部、LINE 聯絡（電腦大圈圈，手機維持小圈圈） */
+#backToTop, #floatLineBtn {
+  position: fixed;
+  right: 20px;
+  z-index: 99;
+  width: 60px;            /* 電腦版大圈圈 */
+  height: 60px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(190, 135, 59, 0.87); /* 半透明咖啡色 */
+  color: #fff;
+  font-size: 2.1em;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0002;
+  opacity: 0.7;
+  transition: opacity 0.2s, background 0.2s;
+  display: none; /* 預設不顯示，由JS控制 */
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(1.5px);
+}
+#backToTop { bottom: 36px; }
+#floatLineBtn { bottom: 108px; display: block; } /* 108px不重疊（60+12+60/4）可依實際再微調 */
+#backToTop:hover, #floatLineBtn:hover {
+  opacity: 1;
+  background: rgba(198,148,69,0.97);
+}
+#floatLineBtn img {
+  width: 66%; height: 66%; /* 圖案跟圈圈同步變大 */
+  vertical-align: middle;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 1px 2px #0002);
+  pointer-events: none;
+}
+/* 手機版浮動按鈕縮小 */
+@media (max-width: 600px) {
+  #backToTop {
+    width: 38px; height: 38px; font-size: 1.2em; bottom: 18px; right: 8px;
+  }
+  #floatLineBtn {
+    right: 8px;
+    bottom: 66px;
+    width: 38px; height: 38px; font-size: 1.2em;
+  }
+  #floatLineBtn img {
+    width: 60%; height: 60%;
+  }
+}
 
     html { scroll-behavior: smooth; }
   </style>
