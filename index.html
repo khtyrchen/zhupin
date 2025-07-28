@@ -178,6 +178,33 @@ html {
   }
 }
 
+#floatLineBtn {
+  position: fixed;
+  right: 22px;
+  bottom: 92px;
+  z-index: 100;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: transparent;   /* ← 透明 */
+  color: #be873b;            /* ICON改跟主題色一致，看得清楚 */
+  font-size: 2em;
+  cursor: pointer;
+  box-shadow: none;          /* 也可以拿掉陰影 */
+  opacity: 1;                /* 完全不透明，因為本來就是透明底 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+}
+#floatLineBtn:hover {
+  color: #c69445;            /* 滑過變色，也可以不要寫 */
+  background: transparent;
+}
+@media (max-width: 600px) {
+  #floatLineBtn { width: 38px; height: 38px; bottom: 66px; font-size: 1.3em;}
+}
 
   </style>
 </head>
@@ -231,6 +258,11 @@ html {
   <div style="text-align:center; margin-bottom:16px;">
     <img src="009.jpg" alt="積木畫介紹3" style="max-width:100%; border-radius:24px; box-shadow:0 2px 14px #0003;">
   </div>
+  <video controls
+    style="width: 100%; border-radius: 18px; box-shadow: 0 2px 14px #0003; margin-bottom: 0;">
+    <source src="010.mp4" type="video/mp4">
+    您的瀏覽器不支援影片播放。
+  </video>
 </div>
   <div id="keychain" class="subsection">
     <h2>浮雕夜燈</h2>
@@ -259,17 +291,37 @@ html {
   </div>
 
   <script>
-    // 分頁切換功能
-    const tabs = document.querySelectorAll('.tab');
-    const pages = document.querySelectorAll('.page');
-    tabs.forEach(tab => {
-      tab.onclick = function() {
-        tabs.forEach(t => t.classList.remove('active'));
-        pages.forEach(p => p.classList.remove('active'));
-        tab.classList.add('active');
-        document.getElementById(tab.dataset.page).classList.add('active');
-      }
-    });
+   // 分頁切換功能+網址 hash 記錄
+const tabs = document.querySelectorAll('.tab');
+const pages = document.querySelectorAll('.page');
+
+// 切換分頁時，同步更新網址 hash
+tabs.forEach(tab => {
+  tab.onclick = function() {
+    tabs.forEach(t => t.classList.remove('active'));
+    pages.forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.page).classList.add('active');
+    // 這裡同步更動網址的 hash
+    location.hash = '#' + tab.dataset.page;
+  }
+});
+
+// 頁面載入時依 hash 顯示正確分頁
+window.onload = function() {
+  const hash = location.hash.replace('#','');
+  if (hash) {
+    const targetTab = document.querySelector(`.tab[data-page="${hash}"]`);
+    const targetPage = document.getElementById(hash);
+    if (targetTab && targetPage) {
+      tabs.forEach(t => t.classList.remove('active'));
+      pages.forEach(p => p.classList.remove('active'));
+      targetTab.classList.add('active');
+      targetPage.classList.add('active');
+    }
+  }
+}
+
   </script>
 
 <button id="backToTop" title="回到最上面">↑</button>
@@ -284,6 +336,13 @@ html {
     window.scrollTo({top:0, behavior:'smooth'});
   }
 </script>
+  <!-- 回頂鈕 -->
+<button id="backToTop" title="回到最上面">↑</button>
+
+<!-- LINE 按鈕 -->
+<a id="floatLineBtn" href="https://linkgoods.com/zhupin" target="_blank" title="LINE 聯繫">
+  <img src="icon.png" alt="LINE" style="width:68%;height:68%;">
+</a>
 
 
 </body>
