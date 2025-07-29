@@ -125,12 +125,32 @@
       background: #be873b;
       color: #fff;
     }
+    /* 手機版縮小次分類按鈕 */
     @media (max-width: 600px) {
       .subbtn {
         font-size: 0.95em;
         padding: 7px 14px;
         border-radius: 14px;
         margin: 0 4px 10px 4px;
+      }
+    }
+    /* 微積木介紹大圖橫幅 - 滿版與RWD效果 */
+    .micro-block-banner {
+      width: 100%;
+      max-width: 750px;
+      display: block;
+      margin: 32px auto 24px auto;
+      border-radius: 20px;
+      box-shadow: 0 2px 14px #0002;
+    }
+    @media (max-width: 600px) {
+      .micro-block-banner {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin-left: calc(-50vw + 50%);
+        border-radius: 0;
+        margin-top: 18px;
+        margin-bottom: 10px;
       }
     }
     .backbtn {
@@ -298,6 +318,8 @@
       <h2>微積木</h2>
       <a href="#mosaic" class="subbtn">積木畫</a>
       <a href="#code" class="subbtn">積木QRCODE</a>
+      <!-- 加上A圖（請確認名稱正確，以下用你最新上傳的檔名） -->
+      <img src="022.jpg" alt="微積木介紹圖" class="card-img">
     </div>
     <!-- 積木畫內容 -->
     <div id="mosaic" class="subsection">
@@ -341,7 +363,6 @@
     <div id="lamp" class="subsection">
       <h2>客製木製品</h2>
       <a href="#keychainQ" class="subbtn">Q版木鑰匙圈</a>
-      <!-- <a href="#otherWood" class="subbtn">其他</a> -->
     </div>
     <div id="keychainQ" class="subsection">
       <img src="018.jpg" alt="Q版木鑰匙圈介紹1" class="card-img">
@@ -352,16 +373,6 @@
         <a href="#lamp" class="backbtn">← 返回客製木製品</a>
       </div>
     </div>
-    <!--
-    <div id="otherWood" class="subsection">
-      <h2>其他</h2>
-      <img src="024.jpg" alt="其他木製品介紹" class="card-img">
-      <p>這裡放其他相關商品的介紹內容。</p>
-      <div style="text-align:center;">
-        <a href="#lamp" class="backbtn">← 返回客製木製品</a>
-      </div>
-    </div>
-    -->
     <div id="bracelet" class="subsection">
       <h2>客製不鏽鋼飾品</h2>
       <p>這裡放客製不鏽鋼飾品介紹</p>
