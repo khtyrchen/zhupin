@@ -125,14 +125,13 @@
       background: #be873b;
       color: #fff;
     }
-   /* 手機版縮小次分類按鈕 */
     @media (max-width: 600px) {
-     .subbtn {
-     font-size: 0.95em;
-     padding: 7px 14px;
-     border-radius: 14px;
-     margin: 0 4px 10px 4px;
-     }
+      .subbtn {
+        font-size: 0.95em;
+        padding: 7px 14px;
+        border-radius: 14px;
+        margin: 0 4px 10px 4px;
+      }
     }
     .backbtn {
       background: #fff;
@@ -205,7 +204,8 @@
       #home img.card-img {
         width: 100vw !important;
         max-width: 100vw !important;
-        margin-left: calc(-50vw + 50%); border-radius: 0;
+        margin-left: calc(-50vw + 50%);
+        border-radius: 0;
       }
     }
     #backToTop, #floatLineBtn {
@@ -288,12 +288,18 @@
   <div id="products" class="page">
     <h1>產品介紹</h1>
     <div class="subnav">
-      <a href="#mosaic" class="subtab">積木畫</a>
-      <a href="#code" class="subtab">積木QRCODE</a>
+      <a href="#miniBrick" class="subtab">微積木</a>
       <a href="#keychain" class="subtab">浮雕夜燈</a>
       <a href="#lamp" class="subtab">客製木製品</a>
       <a href="#bracelet" class="subtab">客製不鏽鋼飾品</a>
     </div>
+    <!-- 微積木主分類 -->
+    <div id="miniBrick" class="subsection">
+      <h2>微積木</h2>
+      <a href="#mosaic" class="subbtn">積木畫</a>
+      <a href="#code" class="subbtn">積木QRCODE</a>
+    </div>
+    <!-- 積木畫內容 -->
     <div id="mosaic" class="subsection">
       <h2>積木畫</h2>
       <img src="007.jpg" alt="積木畫介紹1" class="card-img">
@@ -303,7 +309,11 @@
         <source src="010.mp4" type="video/mp4">
         您的瀏覽器不支援影片播放。
       </video>
+      <div style="text-align:center;">
+        <a href="#miniBrick" class="backbtn">← 返回微積木</a>
+      </div>
     </div>
+    <!-- 積木QRCODE內容 -->
     <div id="code" class="subsection">
       <h2>積木QRCODE</h2>
       <img src="011.jpg" alt="QRCODE介紹1" class="card-img">
@@ -312,7 +322,11 @@
         <source src="013.mp4" type="video/mp4">
         您的瀏覽器不支援影片播放。
       </video>
+      <div style="text-align:center;">
+        <a href="#miniBrick" class="backbtn">← 返回微積木</a>
+      </div>
     </div>
+    <!-- 浮雕夜燈 -->
     <div id="keychain" class="subsection">
       <h2>浮雕夜燈</h2>
       <img src="014.jpg" alt="浮雕夜燈介紹1" class="card-img">
@@ -323,7 +337,7 @@
         您的瀏覽器不支援影片播放。
       </video>
     </div>
-    <!-- 客製木製品區＋次分類 -->
+    <!-- 客製木製品 -->
     <div id="lamp" class="subsection">
       <h2>客製木製品</h2>
       <a href="#keychainQ" class="subbtn">Q版木鑰匙圈</a>
@@ -398,7 +412,7 @@
         } else {
           // 如果是產品介紹下的子區塊，顯示products分頁，並自動滾到區塊
           const productsSubs = [
-            'mosaic','code','keychain','lamp','keychainQ','otherWood','bracelet'
+            'miniBrick','mosaic','code','keychain','lamp','keychainQ','otherWood','bracelet'
           ];
           if(productsSubs.includes(hash)){
             tabs.forEach(t => t.classList.remove('active'));
