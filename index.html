@@ -401,32 +401,6 @@
       backdrop-filter: blur(1.5px);
     }
     #backToTop { bottom: 36px; }
-    #floatLineBtn { bottom: 108px; display: block; }
-    #backToTop:hover, #floatLineBtn:hover {
-      opacity: 1;
-      background: rgba(198,148,69,0.97);
-    }
-    #floatLineBtn img {
-      width: 66%; height: 66%;
-      vertical-align: middle;
-      display: block;
-      margin: 0 auto;
-      filter: drop-shadow(0 1px 2px #0002);
-      pointer-events: none;
-    }
-    @media (max-width: 600px) {
-      #backToTop {
-        width: 38px; height: 38px; font-size: 1.2em; bottom: 18px; right: 8px;
-      }
-      #floatLineBtn {
-        right: 8px;
-        bottom: 66px;
-        width: 38px; height: 38px; font-size: 1.2em;
-      }
-      #floatLineBtn img {
-        width: 60%; height: 60%;
-      }
-    }
     html { scroll-behavior: smooth; }
     @media (max-width: 600px) {
       .page img, .page video {
@@ -499,7 +473,7 @@
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
           <a href="#miniBrick" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回微積木</span>
+             <span class="back-desktop">返回</span>
              <span class="back-mobile">↑</span>
           </a>
         </div>
@@ -523,7 +497,7 @@
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
           <a href="#miniBrick" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回微積木</span>
+             <span class="back-desktop">返回</span>
              <span class="back-mobile">↑</span>
           </a>
         </div>
@@ -572,7 +546,7 @@
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
           <a href="#lamp" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回客製木製品</span>
+             <span class="back-desktop">返回</span>
              <span class="back-mobile">↑</span>
           </a>
         </div>
@@ -594,7 +568,7 @@
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
           <a href="#lamp" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回客製木製品</span>
+             <span class="back-desktop">返回</span>
              <span class="back-mobile">↑</span>
           </a>
         </div>
@@ -623,7 +597,7 @@
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
           <a href="#bracelet" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回客製不鏽鋼飾品</span>
+             <span class="back-desktop">返回</span>
              <span class="back-mobile">↑</span>
           </a>
         </div>
@@ -643,7 +617,7 @@
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
           <a href="#bracelet" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回客製不鏽鋼飾品</span>
+             <span class="back-desktop">返回</span>
              <span class="back-mobile">↑</span>
           </a>
         </div>
@@ -665,7 +639,7 @@
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
           <a href="#bracelet" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回客製不鏽鋼飾品</span>
+             <span class="back-desktop">返回</span>
              <span class="back-mobile">↑</span>
           </a>
         </div>
@@ -688,7 +662,7 @@
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
           <a href="#bracelet" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回客製不鏽鋼飾品</span>
+             <span class="back-desktop">返回</span>
              <span class="back-mobile">↑</span>
           </a>
         </div>
@@ -710,7 +684,6 @@
     <p>這裡可以放Email、LINE、聯絡表單等方式。</p>
   </div>
   <button id="backToTop" title="回到最上面">↑</button>
-    </button>
   <script>
     // ========= 分頁切換(頁籤) =========
     const tabs = document.querySelectorAll('.tab');
