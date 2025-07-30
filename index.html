@@ -100,7 +100,6 @@
       box-shadow: 0 2px 14px #0003;
       margin: 0 auto 28px auto;
     }
-    /* 微積木介紹大圖橫幅 */
     .micro-block-banner {
       width: 100%;
       max-width: 750px;
@@ -152,27 +151,6 @@
         margin: 0 4px 10px 4px;
       }
     }
-    .backbtn {
-      background: #fff;
-      color: #222;
-      display: inline-block;
-      padding: 10px 26px;
-      margin: 24px 0 0 0;
-      border-radius: 18px;
-      font-weight: bold;
-      font-size: 1.08em;
-      letter-spacing: 2px;
-      border: none;
-      outline: none;
-      text-decoration: none;
-      box-shadow: 0 2px 6px #0001;
-      border: 1.5px solid #be873b;
-      transition: background 0.18s, color 0.18s;
-    }
-    .backbtn:hover, .backbtn:focus {
-      background: #be873b;
-      color: #fff;
-    }
     .subnav .subtab {
       background: #f8f8f8;
       border: none;
@@ -198,6 +176,7 @@
       margin-bottom: 36px;
       padding: 16px 0;
       border-bottom: 1px dashed #ccc;
+      position: relative; /* 為了定位返回鈕 */
     }
     .subsection + .subsection {
       border-top: none;
@@ -227,6 +206,151 @@
         border-radius: 0;
       }
     }
+    /* --------- 滑動輪播(共用) --------- */
+    .slider-container {
+      width: 100%;
+      max-width: 750px;
+      margin: 0 auto 28px auto;
+      overflow: hidden;
+      position: relative;
+      border-radius: 24px;
+      box-shadow: 0 2px 14px #0003;
+      background: #fff;
+      padding-bottom: 55px; /* 給下方留白，防止貼死底部，數值可依實際視覺需求微調 */
+    }
+    @media (max-width:600px){
+      .slider-container { 
+        max-width: 100vw; 
+        border-radius: 0;
+        padding-bottom: 44px; /* 手機下方留白可略縮 */
+      }
+      .slide img, .slide video { border-radius: 0 !important; }
+    }
+
+    .slider-wrapper {
+      display: flex;
+      transition: transform 0.35s cubic-bezier(.45,.1,.57,1.1);
+      will-change: transform;
+    }
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+    }
+    /* 控制列（左右箭頭+中間點點）絕對定位於底部，gap可調整間距 */
+    .slider-controls {
+      position: absolute;
+      left: 0; right: 0;
+      bottom: 10px;   /* 距離底部數值可依需求微調 */
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 0;
+    }
+    @media (max-width:600px){
+      .slider-controls {
+        bottom: 8px;
+        gap: 10px;
+      }
+    }
+    .slider-btn {
+      position: static;
+      transform: none;
+      background: rgba(190,135,59,0.83);
+      border: none;
+      color: #fff;
+      font-size: 1.6em;
+      border-radius: 50%;
+      width: 40px; height: 40px;
+      cursor: pointer;
+      z-index: 2;
+      opacity: 0.9;
+      transition: background 0.16s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slider-btn:hover { background: #be873b; opacity: 1; }
+    .slider-dots {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .slider-dot {
+      display: inline-block;
+      width: 13px; height: 13px;
+      border-radius: 50%;
+      background: #e2d6c2;
+      margin: 0 2px;
+      cursor: pointer;
+      border: 2px solid #be873b;
+      transition: background 0.18s, border 0.18s;
+    }
+    .slider-dot.active {
+      background: #be873b;
+      border: 2px solid #be873b;
+    }
+    @media (max-width:600px){
+      .slider-btn { font-size: 1.2em; width: 32px; height: 32px;}
+      .slider-dot { width: 10px; height: 10px; }
+    }
+    /* --------- End 滑動輪播 --------- */
+    /* 返回按鈕外觀與定位 */
+    .backbtn {
+      background: #fff;
+      color: #222;
+      display: inline-block;
+      padding: 10px 26px;
+      border-radius: 18px;
+      font-weight: bold;
+      font-size: 1.08em;
+      letter-spacing: 2px;
+      border: none;
+      outline: none;
+      text-decoration: none;
+      box-shadow: 0 2px 6px #0001;
+      border: 1.5px solid #be873b;
+      transition: background 0.18s, color 0.18s;
+    }
+    .backbtn:hover, .backbtn:focus {
+      background: #be873b;
+      color: #fff;
+    }
+    .slider-backbtn {
+      position: absolute;
+      right: 2px;
+      bottom: -2px;
+      z-index: 10;
+      margin: 0;
+    }
+    @media (max-width:600px){
+      .slider-backbtn {
+        right: 8px;
+        bottom: 0;
+        padding: 7px 14px;
+        font-size: 0.97em;
+        border-radius: 14px;
+      }
+    }
+    /* 桌機/手機顯示不同返回內容 */
+    .back-mobile {
+      display: none;
+    }
+    @media (max-width:600px) {
+      .back-desktop {
+        display: none;
+      }
+      .back-mobile {
+        display: inline;
+        font-size: 1.35em;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+    }
+    /* 其他共用樣式（如浮動鈕等）省略 */
     #backToTop, #floatLineBtn {
       position: fixed;
       right: 20px;
@@ -318,70 +442,128 @@
       <a href="#code" class="subbtn">積木QRCODE</a>
       <img src="022.jpg" alt="微積木介紹圖" class="micro-block-banner">
     </div>
-    <!-- 積木畫內容 -->
+    <!-- =============== 積木畫 =============== -->
     <div id="mosaic" class="subsection">
       <h2>積木畫</h2>
-      <img src="007.jpg" alt="積木畫介紹1" class="card-img">
-      <img src="008.jpg" alt="積木畫介紹2" class="card-img">
-      <img src="009.jpg" alt="積木畫介紹3" class="card-img">
-      <video controls style="width: 100%; border-radius: 18px; box-shadow: 0 2px 14px #0003; margin-bottom: 0;">
-        <source src="010.mp4" type="video/mp4">
-        您的瀏覽器不支援影片播放。
-      </video>
-      <div style="text-align:center;">
-        <a href="#miniBrick" class="backbtn">← 返回微積木</a>
+      <div class="slider-container" id="slider-mosaic">
+        <div class="slider-wrapper">
+          <div class="slide"><img src="007.jpg" alt="積木畫介紹1" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="008.jpg" alt="積木畫介紹2" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="009.jpg" alt="積木畫介紹3" style="width:100%;border-radius:24px;"></div>
+          <div class="slide">
+            <video controls style="width:100%;border-radius:18px;box-shadow:0 2px 14px #0003;">
+              <source src="010.mp4" type="video/mp4">您的瀏覽器不支援影片播放。
+            </video>
+          </div>
+        </div>
+        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+        <div class="slider-controls">
+          <button class="slider-btn prev">&#8592;</button>
+          <div class="slider-dots"></div>
+          <button class="slider-btn next">&#8594;</button>
+          <a href="#miniBrick" class="backbtn slider-backbtn">
+             <span class="back-desktop">返回微積木</span>
+             <span class="back-mobile">↑</span>
+          </a>
+        </div>
       </div>
     </div>
-    <!-- 積木QRCODE內容 -->
+    <!-- =============== 積木QRCODE =============== -->
     <div id="code" class="subsection">
       <h2>積木QRCODE</h2>
-      <img src="011.jpg" alt="QRCODE介紹1" class="card-img">
-      <img src="012.jpg" alt="QRCODE介紹2" class="card-img">
-      <video controls style="width: 100%; border-radius: 18px; box-shadow: 0 2px 14px #0003; margin-bottom: 0;">
-        <source src="013.mp4" type="video/mp4">
-        您的瀏覽器不支援影片播放。
-      </video>
-      <div style="text-align:center;">
-        <a href="#miniBrick" class="backbtn">← 返回微積木</a>
+      <div class="slider-container" id="slider-code">
+        <div class="slider-wrapper">
+          <div class="slide"><img src="011.jpg" alt="QRCODE介紹1" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="012.jpg" alt="QRCODE介紹2" style="width:100%;border-radius:24px;"></div>
+          <div class="slide">
+            <video controls style="width:100%;border-radius:18px;box-shadow:0 2px 14px #0003;">
+              <source src="013.mp4" type="video/mp4">您的瀏覽器不支援影片播放。
+            </video>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn prev">&#8592;</button>
+          <div class="slider-dots"></div>
+          <button class="slider-btn next">&#8594;</button>
+          <a href="#miniBrick" class="backbtn slider-backbtn">
+             <span class="back-desktop">返回微積木</span>
+             <span class="back-mobile">↑</span>
+          </a>
+        </div>
       </div>
     </div>
-    <!-- 浮雕夜燈 -->
+    <!-- =============== 浮雕夜燈 =============== -->
     <div id="keychain" class="subsection">
       <h2>浮雕夜燈</h2>
-      <img src="014.jpg" alt="浮雕夜燈介紹1" class="card-img">
-      <img src="015.jpg" alt="浮雕夜燈介紹2" class="card-img">
-      <img src="016.jpg" alt="浮雕夜燈介紹3" class="card-img">
-      <video controls style="width: 100%; border-radius: 18px; box-shadow: 0 2px 14px #0003; margin-bottom: 0;">
-        <source src="017.mp4" type="video/mp4">
-        您的瀏覽器不支援影片播放。
-      </video>
+      <div class="slider-container" id="slider-keychain">
+        <div class="slider-wrapper">
+          <div class="slide"><img src="014.jpg" alt="浮雕夜燈1" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="015.jpg" alt="浮雕夜燈2" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="016.jpg" alt="浮雕夜燈3" style="width:100%;border-radius:24px;"></div>
+          <div class="slide">
+            <video controls style="width:100%;border-radius:18px;box-shadow:0 2px 14px #0003;">
+              <source src="017.mp4" type="video/mp4">您的瀏覽器不支援影片播放。
+            </video>
+          </div>
+        </div>
+        <div class="slider-controls">
+          <button class="slider-btn prev">&#8592;</button>
+          <div class="slider-dots"></div>
+          <button class="slider-btn next">&#8594;</button>
+        </div>
+      </div>
     </div>
-    <!-- 客製木製品 -->
+    <!-- 客製木製品主分類 -->
     <div id="lamp" class="subsection">
       <h2>客製木製品</h2>
       <a href="#keychainQ" class="subbtn">Q版木鑰匙圈</a>
       <a href="#graduate" class="subbtn">畢業祝福木鑰匙圈</a>
     </div>
+    <!-- =============== Q版木鑰匙圈 =============== -->
     <div id="keychainQ" class="subsection">
       <h2>Q版木鑰匙圈</h2>
-      <img src="018.jpg" alt="Q版木鑰匙圈介紹1" class="card-img">
-      <img src="019.jpg" alt="Q版木鑰匙圈介紹2" class="card-img">
-      <img src="020.jpg" alt="Q版木鑰匙圈介紹3" class="card-img">
-      <img src="021.jpg" alt="Q版木鑰匙圈介紹4" class="card-img">
-      <div style="text-align:center;">
-        <a href="#lamp" class="backbtn">← 返回客製木製品</a>
+      <div class="slider-container" id="slider-keychainQ">
+        <div class="slider-wrapper">
+          <div class="slide"><img src="018.jpg" alt="Q版木鑰匙圈介紹1" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="019.jpg" alt="Q版木鑰匙圈介紹2" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="020.jpg" alt="Q版木鑰匙圈介紹3" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="021.jpg" alt="Q版木鑰匙圈介紹4" style="width:100%;border-radius:24px;"></div>
+        </div>
+        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+        <div class="slider-controls">
+          <button class="slider-btn prev">&#8592;</button>
+          <div class="slider-dots"></div>
+          <button class="slider-btn next">&#8594;</button>
+          <a href="#lamp" class="backbtn slider-backbtn">
+             <span class="back-desktop">返回客製木製品</span>
+             <span class="back-mobile">↑</span>
+          </a>
+        </div>
       </div>
     </div>
+    <!-- =============== 畢業祝福木鑰匙圈 =============== -->
     <div id="graduate" class="subsection">
       <h2>畢業祝福木鑰匙圈</h2>
-      <img src="023.jpg" alt="畢業祝福木鑰匙圈1" class="card-img">
-      <img src="024.jpg" alt="畢業祝福木鑰匙圈2" class="card-img">
-      <img src="025.jpg" alt="畢業祝福木鑰匙圈3" class="card-img">
-      <img src="026.jpg" alt="畢業祝福木鑰匙圈4" class="card-img">
-      <div style="text-align:center;">
-        <a href="#lamp" class="backbtn">← 返回客製木製品</a>
+      <div class="slider-container" id="slider-graduate">
+        <div class="slider-wrapper">
+          <div class="slide"><img src="023.jpg" alt="畢業祝福木鑰匙圈介紹1" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="024.jpg" alt="畢業祝福木鑰匙圈介紹2" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="025.jpg" alt="畢業祝福木鑰匙圈介紹3" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="026.jpg" alt="畢業祝福木鑰匙圈介紹4" style="width:100%;border-radius:24px;"></div>
+        </div>
+        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+        <div class="slider-controls">
+          <button class="slider-btn prev">&#8592;</button>
+          <div class="slider-dots"></div>
+          <button class="slider-btn next">&#8594;</button>
+          <a href="#lamp" class="backbtn slider-backbtn">
+             <span class="back-desktop">返回客製木製品</span>
+             <span class="back-mobile">↑</span>
+          </a>
+        </div>
       </div>
     </div>
+    <!-- 客製不鏽鋼飾品主分類 -->
     <div id="bracelet" class="subsection">
       <h2>客製不鏽鋼飾品</h2>
       <a href="#snake" class="subbtn">蛇骨手鍊</a>
@@ -389,45 +571,95 @@
       <a href="#pendant" class="subbtn">造型鑰匙圈</a>
       <a href="#bone" class="subbtn">骨頭鑰匙圈</a>
     </div>
+    <!-- =============== 蛇骨手鍊 =============== -->
     <div id="snake" class="subsection">
       <h2>蛇骨手鍊</h2>
-      <img src="027.jpg" alt="蛇骨手鍊1" class="card-img">
-      <img src="028.jpg" alt="蛇骨手鍊2" class="card-img">
-      <img src="029.jpg" alt="蛇骨手鍊3" class="card-img">
-      <div style="text-align:center;">
-        <a href="#bracelet" class="backbtn">← 返回客製不鏽鋼飾品</a>
+      <div class="slider-container" id="slider-snake">
+        <div class="slider-wrapper">
+          <div class="slide"><img src="027.jpg" alt="蛇骨手鍊介紹1" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="028.jpg" alt="蛇骨手鍊介紹2" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="029.jpg" alt="蛇骨手鍊介紹3" style="width:100%;border-radius:24px;"></div>
+        </div>
+        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+        <div class="slider-controls">
+          <button class="slider-btn prev">&#8592;</button>
+          <div class="slider-dots"></div>
+          <button class="slider-btn next">&#8594;</button>
+          <a href="#bracelet" class="backbtn slider-backbtn">
+             <span class="back-desktop">返回客製不鏽鋼飾品</span>
+             <span class="back-mobile">↑</span>
+          </a>
+        </div>
       </div>
     </div>
+    <!-- =============== 開瓶器造型鑰匙圈 =============== -->
     <div id="bottle" class="subsection">
       <h2>開瓶器造型鑰匙圈</h2>
-      <img src="031.jpg" alt="開瓶器1" class="card-img">
-      <img src="030.jpg" alt="開瓶器2" class="card-img">
-      <div style="text-align:center;">
-        <a href="#bracelet" class="backbtn">← 返回客製不鏽鋼飾品</a>
+      <div class="slider-container" id="slider-bottle">
+        <div class="slider-wrapper">
+          <div class="slide"><img src="031.jpg" alt="開瓶器造型鑰匙圈介紹1" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="030.jpg" alt="開瓶器造型鑰匙圈介紹2" style="width:100%;border-radius:24px;"></div>
+        </div>
+        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+        <div class="slider-controls">
+          <button class="slider-btn prev">&#8592;</button>
+          <div class="slider-dots"></div>
+          <button class="slider-btn next">&#8594;</button>
+          <a href="#bracelet" class="backbtn slider-backbtn">
+             <span class="back-desktop">返回客製不鏽鋼飾品</span>
+             <span class="back-mobile">↑</span>
+          </a>
+        </div>
       </div>
     </div>
+    <!-- =============== 造型鑰匙圈 =============== -->
     <div id="pendant" class="subsection">
       <h2>造型鑰匙圈</h2>
-      <img src="032.jpg" alt="造型鑰匙圈1" class="card-img">
-      <img src="033.jpg" alt="造型鑰匙圈2" class="card-img">
-      <img src="034.jpg" alt="造型鑰匙圈3" class="card-img">
-      <img src="035.jpg" alt="造型鑰匙圈4" class="card-img">
-      <div style="text-align:center;">
-        <a href="#bracelet" class="backbtn">← 返回客製不鏽鋼飾品</a>
+      <div class="slider-container" id="slider-pendant">
+        <div class="slider-wrapper">
+          <div class="slide"><img src="032.jpg" alt="造型鑰匙圈介紹1" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="033.jpg" alt="造型鑰匙圈介紹2" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="034.jpg" alt="造型鑰匙圈介紹3" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="035.jpg" alt="造型鑰匙圈介紹4" style="width:100%;border-radius:24px;"></div>
+        </div>
+        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+        <div class="slider-controls">
+          <button class="slider-btn prev">&#8592;</button>
+          <div class="slider-dots"></div>
+          <button class="slider-btn next">&#8594;</button>
+          <a href="#bracelet" class="backbtn slider-backbtn">
+             <span class="back-desktop">返回客製不鏽鋼飾品</span>
+             <span class="back-mobile">↑</span>
+          </a>
+        </div>
       </div>
     </div>
+    <!-- =============== 骨頭鑰匙圈 =============== -->
     <div id="bone" class="subsection">
       <h2>骨頭鑰匙圈</h2>
-      <img src="036.jpg" alt="骨頭鑰匙圈1" class="card-img">
-      <img src="037.jpg" alt="骨頭鑰匙圈2" class="card-img">
-      <img src="038.jpg" alt="骨頭鑰匙圈3" class="card-img">
-      <img src="039.jpg" alt="骨頭鑰匙圈4" class="card-img">
-      <img src="040.jpg" alt="骨頭鑰匙圈4" class="card-img">
-      <div style="text-align:center;">
-        <a href="#bracelet" class="backbtn">← 返回客製不鏽鋼飾品</a>
+      <div class="slider-container" id="slider-bone">
+        <div class="slider-wrapper">
+          <div class="slide"><img src="036.jpg" alt="骨頭鑰匙圈介紹1" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="037.jpg" alt="骨頭鑰匙圈介紹2" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="038.jpg" alt="骨頭鑰匙圈介紹3" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="039.jpg" alt="骨頭鑰匙圈介紹4" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="040.jpg" alt="骨頭鑰匙圈介紹5" style="width:100%;border-radius:24px;"></div>
+        </div>
+        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+        <div class="slider-controls">
+          <button class="slider-btn prev">&#8592;</button>
+          <div class="slider-dots"></div>
+          <button class="slider-btn next">&#8594;</button>
+          <a href="#bracelet" class="backbtn slider-backbtn">
+             <span class="back-desktop">返回客製不鏽鋼飾品</span>
+             <span class="back-mobile">↑</span>
+          </a>
+        </div>
       </div>
     </div>
+    <!-- ... -->
   </div>
+  <!-- 其餘 FAQ、info、contact頁、浮動按鈕、JS，照原本不變 -->
   <div id="faq" class="page">
     <h1>常見問答（FAQ）</h1>
     <p>這裡整理你想給客人的常見問題解答。</p>
@@ -445,7 +677,7 @@
     <img src="icon.png" alt="LINE圖示">
   </button>
   <script>
-    // 分頁切換+網址 hash 記錄
+    // ========= 分頁切換(頁籤) =========
     const tabs = document.querySelectorAll('.tab');
     const pages = document.querySelectorAll('.page');
     tabs.forEach(tab => {
@@ -455,17 +687,14 @@
         tab.classList.add('active');
         document.getElementById(tab.dataset.page).classList.add('active');
         location.hash = '#' + tab.dataset.page;
-        // 點選分頁時自動滾到最上方
         window.scrollTo({top:0, behavior:'instant'});
       }
     });
-
-    // 修正版：進站時自動根據hash跳到對應主分頁＆子分類
+    // ========= 進站時根據hash自動切換分頁 =========
     window.onload = function() {
       const hash = location.hash.replace('#','');
       if (hash) {
-        // 判斷是不是主分頁
-        const targetTab = document.querySelector(`.tab[data-page="${hash}"]`);
+        const targetTab = document.querySelector('.tab[data-page="'+hash+'"]');
         const targetPage = document.getElementById(hash);
         if (targetTab && targetPage) {
           tabs.forEach(t => t.classList.remove('active'));
@@ -474,14 +703,13 @@
           targetPage.classList.add('active');
           window.scrollTo({top:0, behavior:'instant'});
         } else {
-          // 如果是產品介紹下的子區塊，顯示products分頁，並自動滾到區塊
           const productsSubs = [
             'miniBrick','mosaic','code','keychain','lamp','keychainQ','graduate','otherWood','bracelet','snake','bottle','pendant','bone'
           ];
           if(productsSubs.includes(hash)){
             tabs.forEach(t => t.classList.remove('active'));
             pages.forEach(p => p.classList.remove('active'));
-            document.querySelector(`.tab[data-page="products"]`).classList.add('active');
+            document.querySelector('.tab[data-page="products"]').classList.add('active');
             document.getElementById("products").classList.add('active');
             setTimeout(()=>{
               const targetSub = document.getElementById(hash);
@@ -491,7 +719,7 @@
         }
       }
     }
-    // 回頂鈕顯示/隱藏 + 點擊滾動頂部
+    // ========= 回頂鈕顯示/隱藏 + 點擊滾動頂部 =========
     window.onscroll = function() {
       document.getElementById("backToTop").style.display =
         (document.documentElement.scrollTop || document.body.scrollTop) > 120 ? "flex" : "none";
@@ -502,6 +730,62 @@
     document.getElementById("floatLineBtn").onclick = function() {
       window.open('https://linkgoods.com/zhupin', '_blank');
     };
+
+    // ========= 滑動輪播功能 (每個slider獨立) =========
+    function makeSlider(sliderId) {
+      const container = document.getElementById(sliderId);
+      if(!container) return;
+      const wrapper = container.querySelector('.slider-wrapper');
+      const slides = wrapper.querySelectorAll('.slide');
+      const prevBtn = container.querySelector('.slider-btn.prev');
+      const nextBtn = container.querySelector('.slider-btn.next');
+      const dotsContainer = container.querySelector('.slider-dots');
+      let idx = 0;
+
+      function show(idxNew){
+        idx = (idxNew + slides.length) % slides.length;
+        wrapper.style.transform = `translateX(${-idx*100}%)`;
+        [...dotsContainer.children].forEach((dot,i)=>dot.classList.toggle('active', i===idx));
+      }
+      // 建立dots
+      dotsContainer.innerHTML = '';
+      slides.forEach((s,i)=>{
+        const dot = document.createElement('span');
+        dot.className = 'slider-dot' + (i===0?' active':'');
+        dot.onclick = ()=>show(i);
+        dotsContainer.appendChild(dot);
+      });
+
+      prevBtn.onclick = ()=>show(idx-1);
+      nextBtn.onclick = ()=>show(idx+1);
+      show(0);
+
+      // 支援觸控滑動
+      let startX=0, moved=0;
+      wrapper.ontouchstart = (e)=>{startX = e.touches[0].clientX; moved=0;}
+      wrapper.ontouchmove = (e)=>{
+        moved = e.touches[0].clientX - startX;
+      }
+      wrapper.ontouchend = ()=>{
+        if(Math.abs(moved)>45){
+          if(moved<0) show(idx+1);
+          else show(idx-1);
+        }
+      }
+    }
+    // ========== 啟動所有滑動區塊 ==========  
+    window.addEventListener('DOMContentLoaded', ()=>{
+      makeSlider('slider-mosaic');
+      makeSlider('slider-code');
+      makeSlider('slider-keychain');
+      makeSlider('slider-keychainQ');
+      makeSlider('slider-graduate');
+      makeSlider('slider-snake');
+      makeSlider('slider-bottle');
+      makeSlider('slider-pendant');
+      makeSlider('slider-bone');
+    });
+    // ====== End ======
   </script>
 </body>
 </html>
