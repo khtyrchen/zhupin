@@ -100,6 +100,25 @@
       box-shadow: 0 2px 14px #0003;
       margin: 0 auto 28px auto;
     }
+    /* 微積木介紹大圖橫幅 */
+    .micro-block-banner {
+      width: 100%;
+      max-width: 750px;
+      display: block;
+      margin: 32px auto 24px auto;
+      border-radius: 20px;
+      box-shadow: 0 2px 14px #0002;
+    }
+    @media (max-width: 600px) {
+      .micro-block-banner {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        margin-left: calc(-50vw + 50%);
+        border-radius: 0;
+        margin-top: 18px;
+        margin-bottom: 10px;
+      }
+    }
     .subnav {
       text-align: center;
       margin-bottom: 20px;
@@ -125,32 +144,12 @@
       background: #be873b;
       color: #fff;
     }
-    /* 手機版縮小次分類按鈕 */
     @media (max-width: 600px) {
       .subbtn {
         font-size: 0.95em;
         padding: 7px 14px;
         border-radius: 14px;
         margin: 0 4px 10px 4px;
-      }
-    }
-    /* 微積木介紹大圖橫幅 - 滿版與RWD效果 */
-    .micro-block-banner {
-      width: 100%;
-      max-width: 750px;
-      display: block;
-      margin: 32px auto 24px auto;
-      border-radius: 20px;
-      box-shadow: 0 2px 14px #0002;
-    }
-    @media (max-width: 600px) {
-      .micro-block-banner {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        margin-left: calc(-50vw + 50%);
-        border-radius: 0;
-        margin-top: 18px;
-        margin-bottom: 10px;
       }
     }
     .backbtn {
@@ -318,7 +317,7 @@
       <h2>微積木</h2>
       <a href="#mosaic" class="subbtn">積木畫</a>
       <a href="#code" class="subbtn">積木QRCODE</a>
-      <img src="022.jpg" alt="微積木介紹圖" class="card-img">
+      <img src="022.jpg" alt="微積木介紹圖" class="micro-block-banner">
     </div>
     <!-- 積木畫內容 -->
     <div id="mosaic" class="subsection">
@@ -389,6 +388,7 @@
       <a href="#snake" class="subbtn">蛇骨手鍊</a>
       <a href="#bottle" class="subbtn">開瓶器造型鑰匙圈</a>
       <a href="#pendant" class="subbtn">造型鑰匙圈</a>
+      <a href="#bone" class="subbtn">骨頭鑰匙圈</a>
     </div>
     <div id="snake" class="subsection">
       <h2>蛇骨手鍊</h2>
@@ -413,6 +413,17 @@
       <img src="033.jpg" alt="造型鑰匙圈2" class="card-img">
       <img src="034.jpg" alt="造型鑰匙圈3" class="card-img">
       <img src="035.jpg" alt="造型鑰匙圈4" class="card-img">
+      <div style="text-align:center;">
+        <a href="#bracelet" class="backbtn">← 返回客製不鏽鋼飾品</a>
+      </div>
+    </div>
+    <div id="bone" class="subsection">
+      <h2>骨頭鑰匙圈</h2>
+      <img src="036.jpg" alt="骨頭鑰匙圈1" class="card-img">
+      <img src="037.jpg" alt="骨頭鑰匙圈2" class="card-img">
+      <img src="038.jpg" alt="骨頭鑰匙圈3" class="card-img">
+      <img src="039.jpg" alt="骨頭鑰匙圈4" class="card-img">
+      <img src="040.jpg" alt="骨頭鑰匙圈4" class="card-img">
       <div style="text-align:center;">
         <a href="#bracelet" class="backbtn">← 返回客製不鏽鋼飾品</a>
       </div>
@@ -445,6 +456,8 @@
         tab.classList.add('active');
         document.getElementById(tab.dataset.page).classList.add('active');
         location.hash = '#' + tab.dataset.page;
+        // 點選分頁時自動滾到最上方
+        window.scrollTo({top:0, behavior:'instant'});
       }
     });
 
@@ -460,17 +473,17 @@
           pages.forEach(p => p.classList.remove('active'));
           targetTab.classList.add('active');
           targetPage.classList.add('active');
+          window.scrollTo({top:0, behavior:'instant'});
         } else {
           // 如果是產品介紹下的子區塊，顯示products分頁，並自動滾到區塊
           const productsSubs = [
-            'miniBrick','mosaic','code','keychain','lamp','keychainQ','otherWood','bracelet'
+            'miniBrick','mosaic','code','keychain','lamp','keychainQ','graduate','otherWood','bracelet','snake','bottle','pendant','bone'
           ];
           if(productsSubs.includes(hash)){
             tabs.forEach(t => t.classList.remove('active'));
             pages.forEach(p => p.classList.remove('active'));
             document.querySelector(`.tab[data-page="products"]`).classList.add('active');
             document.getElementById("products").classList.add('active');
-            // 自動平滑滾動到子區塊
             setTimeout(()=>{
               const targetSub = document.getElementById(hash);
               if(targetSub) targetSub.scrollIntoView({behavior:'smooth', block:'start'});
