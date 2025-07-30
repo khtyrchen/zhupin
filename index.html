@@ -418,6 +418,70 @@
   /* 如果圖片本身就是圓形圖，這一行不需要了：border-radius: 50%; */
   margin: 0 auto;
 }
+    /* 聯絡我們專屬樣式 */
+.contact-list {
+  max-width: 420px;
+  margin: 40px auto 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.contact-list li {
+  margin-bottom: 16px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border: 1.5px solid #be873b;
+  border-radius: 18px;
+  padding: 0 22px;
+  min-height: 48px;
+  font-size: 1.09em;
+  font-weight: bold;
+  color: #6b4216;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+  box-shadow: 0 2px 10px #0001;
+}
+
+.contact-item:hover, .contact-item:focus {
+  background: #be873b;
+  color: #fff;
+  border-color: #be873b;
+}
+
+.contact-arrow {
+  font-size: 1.38em;
+  color: #be873b;
+  margin-left: 14px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 600px) {
+  .contact-list {
+    margin: 22px 0 0 0;
+    max-width: 96vw;
+  }
+  .contact-list li {
+    margin-bottom: 10px;
+  }
+  .contact-item {
+    font-size: 0.98em;
+    min-height: 40px;
+    padding: 0 10px;
+    border-radius: 13px;
+  }
+  .contact-arrow {
+    font-size: 1.10em;
+    margin-left: 6px;
+  }
+}
+
 
   </style>
 </head>
@@ -679,11 +743,39 @@
     <h1>購買須知</h1>
     <p>這裡放下單流程、付款/出貨/運費等說明。</p>
   </div>
-  <div id="contact" class="page">
-    <h1>聯絡我們</h1>
-    <p>這裡可以放Email、LINE、聯絡表單等方式。</p>
-  </div>
-  <button id="backToTop" title="回到最上面">↑</button>
+<div id="contact" class="page">
+  <h1>聯絡我們</h1>
+  <ul class="contact-list">
+    <li>
+      <a href="https://www.facebook.com/groups/2117210388741021/?ref=share&mibextid=CTbP7E" class="contact-item" target="_blank">
+        FB社團（享社團優惠）<span class="contact-arrow">&#8250;</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://line.me/R/ti/p/@jzn0523g?ts=06232135&oat_content=url" class="contact-item" target="_blank">
+        LINE官方 <span class="contact-arrow">&#8250;</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.instagram.com/zhu.pin.blocks?igsh=dWl1OG05cmQwZjJ2" class="contact-item" target="_blank">
+        IG <span class="contact-arrow">&#8250;</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://www.facebook.com/profile.php?id=61574545305721" class="contact-item" target="_blank">
+        FB粉專 <span class="contact-arrow">&#8250;</span>
+      </a>
+    </li>
+    <li>
+      <a href="https://shopee.tw/shop/3608090" class="contact-item" target="_blank">
+        蝦皮賣場 <span class="contact-arrow">&#8250;</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+  
+<button id="backToTop" title="回到最上面">↑</button>
   <script>
     // ========= 分頁切換(頁籤) =========
     const tabs = document.querySelectorAll('.tab');
