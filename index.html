@@ -436,6 +436,15 @@
         border-radius: 0 !important;
       }
     }
+.logo-img {
+  width: 60px;          /* 你想要的顯示大小，可調整 */
+  height: 60px;
+  display: block;
+  object-fit: contain;  /* 確保內容不會被裁掉 */
+  /* 如果圖片本身就是圓形圖，這一行不需要了：border-radius: 50%; */
+  margin: 0 auto;
+}
+
   </style>
 </head>
 <body>
@@ -702,7 +711,7 @@
   </div>
   <button id="backToTop" title="回到最上面">↑</button>
   <button id="floatLineBtn" title="聯絡我們">
-    <img src="icon.png" alt="LINE圖示">
+    <img src="icon.png" alt="竹拼Logo" class="logo-img">
   </button>
   <script>
     // ========= 分頁切換(頁籤) =========
