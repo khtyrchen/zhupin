@@ -485,7 +485,8 @@
     margin-left: 6px;
   }
 }
-
+#info .infosubnav { text-align: left; }
+#info .infosubnav .subbtn { margin-left: 0; margin-right: 10px; }
 
   </style>
 </head>
@@ -815,10 +816,159 @@
       </div>
     </div>
   </div>
-  <div id="info" class="page">
-    <h1>購買須知</h1>
-    <p>這裡放下單流程、付款/出貨/運費等說明。</p>
+<!-- =============== 購買須知 =============== -->
+<div id="info" class="page">
+  <!-- 第一層：主分類 -->
+  <div class="subnav">
+    <a href="#info-miniBrick" class="subtab">微積木</a>
+    <a href="#info-keychain" class="subtab">浮雕夜燈</a>
+    <a href="#info-lamp" class="subtab">客製木製品</a>
+    <a href="#info-bracelet" class="subtab">客製不鏽鋼飾品</a>
   </div>
+  <!-- 第二層：微積木子分類 -->
+  <div id="info-miniBrick" class="subsection">
+    <div class="infosubnav">
+      <h2>微積木</h2>
+      <a href="#info-mosaic" class="subbtn">積木畫</a>
+      <a href="#info-qrcode" class="subbtn">積木QRCODE</a>
+      <img src="022.jpg" alt="微積木介紹圖" class="micro-block-banner">
+      <!-- 你如果有其他微積木細項也可加 -->
+    </div>
+  </div>
+  <!-- 第三層：積木畫子分類 -->
+  <div id="info-mosaic" class="subsection">
+    <div class="infosubnav">
+      <h3>積木畫</h3>
+      <a href="#price-Material" class="subbtn">材料包價格計算方式</a>
+      <a href="#price-substitute" class="subbtn">代拼價格計算方式</a>
+      <a href="#process-miniBrick" class="subbtn">訂製流程</a>
+    </div>
+  </div>
+  <!-- 第四層：積木畫詳細子頁 -->
+  <div id="price-Material" class="subsection">
+    <h2>材料包價格計算方式</h2>
+    <div class="slider-container" id="slider-price-Material">
+      <div class="slider-wrapper">
+        <div class="slide"><img src="054.jpg" alt="材料包1" style="width:100%;border-radius:24px;"></div>
+        <div class="slide"><img src="055.jpg" alt="材料包2" style="width:100%;border-radius:24px;"></div>
+        <div class="slide"><img src="056.jpg" alt="材料包3" style="width:100%;border-radius:24px;"></div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+        <a href="#info-mosaic" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="price-substitute" class="subsection">
+    <h2>代拼價格計算方式</h2>
+    <div class="slider-container" id="slider-price-substitute">
+      <div class="slider-wrapper">
+        <div class="slide"><img src="057.jpg" alt="代拼1" style="width:100%;border-radius:24px;"></div>
+        <div class="slide"><img src="058.jpg" alt="代拼2" style="width:100%;border-radius:24px;"></div>
+        <div class="slide"><img src="059.jpg" alt="代拼3" style="width:100%;border-radius:24px;"></div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+        <a href="#info-mosaic" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="process-miniBrick" class="subsection">
+    <h2>訂製流程</h2>
+    <div class="slider-container" id="slider-process-miniBrick">
+      <div class="slider-wrapper">
+        <div class="slide"><img src="062.jpg" alt="訂製流程1" style="width:100%;border-radius:24px;"></div>
+        <div class="slide"><img src="063.jpg" alt="訂製流程2" style="width:100%;border-radius:24px;"></div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+        <a href="#info-mosaic" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
+      </div>
+    </div>
+  </div>
+   <!-- 第三層：積木QRCODE子分類 -->
+  <div id="info-qrcode" class="subsection">
+    <div class="infosubnav">
+      <h3>積木QRCODE</h3>
+      <a href="#price-Material-qrcode" class="subbtn">材料包價格計算方式</a>
+      <a href="#price-substitute-qrcode" class="subbtn">代拼價格計算方式</a>
+      <a href="#process-miniBrick-qrcode" class="subbtn">訂製流程</a>
+    </div>
+  </div>
+  <!-- 第四層：積木QRCODE詳細子頁 -->
+  <div id="price-Material-qrcode" class="subsection">
+    <h2>材料包價格計算方式</h2>
+    <div class="slider-container" id="slider-price-Material-qrcode">
+      <div class="slider-wrapper">
+        <div class="slide"><img src="060.jpg" alt="QRCODE材料包1" style="width:100%;border-radius:24px;"></div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+        <a href="#info-qrcode" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="price-substitute-qrcode" class="subsection">
+    <h2>代拼價格計算方式</h2>
+    <div class="slider-container" id="slider-price-substitute-qrcode">
+      <div class="slider-wrapper">
+        <div class="slide"><img src="061.jpg" alt="QRCODE代拼1" style="width:100%;border-radius:24px;"></div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+        <a href="#info-qrcode" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="process-miniBrick-qrcode" class="subsection">
+    <h2>訂製流程</h2>
+    <div class="slider-container" id="slider-process-miniBrick-qrcode">
+      <div class="slider-wrapper">
+        <div class="slide"><img src="064.jpg" alt="QRCODE訂製1" style="width:100%;border-radius:24px;"></div>
+        <div class="slide"><img src="065.jpg" alt="QRCODE訂製2" style="width:100%;border-radius:24px;"></div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+        <a href="#info-qrcode" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+</div>
+
+<!-- =============== 聯絡我們 =============== -->
 <div id="contact" class="page">
   <h1>聯絡我們</h1>
   <ul class="contact-list">
@@ -866,35 +1016,65 @@
         window.scrollTo({top:0, behavior:'instant'});
       }
     });
-    // ========= 進站時根據hash自動切換分頁 =========
-    window.onload = function() {
-      const hash = location.hash.replace('#','');
-      if (hash) {
-        const targetTab = document.querySelector('.tab[data-page="'+hash+'"]');
-        const targetPage = document.getElementById(hash);
-        if (targetTab && targetPage) {
-          tabs.forEach(t => t.classList.remove('active'));
-          pages.forEach(p => p.classList.remove('active'));
-          targetTab.classList.add('active');
-          targetPage.classList.add('active');
-          window.scrollTo({top:0, behavior:'instant'});
-        } else {
-          const productsSubs = [
-            'miniBrick','mosaic','code','keychain','lamp','keychainQ','graduate','otherWood','bracelet','snake','bottle','pendant','bone'
-          ];
-          if(productsSubs.includes(hash)){
-            tabs.forEach(t => t.classList.remove('active'));
-            pages.forEach(p => p.classList.remove('active'));
-            document.querySelector('.tab[data-page="products"]').classList.add('active');
-            document.getElementById("products").classList.add('active');
-            setTimeout(()=>{
-              const targetSub = document.getElementById(hash);
-              if(targetSub) targetSub.scrollIntoView({behavior:'smooth', block:'start'});
-            }, 80);
-          }
-        }
+window.onload = function() {
+  const hash = location.hash.replace('#','');
+  if (hash) {
+    // 1. 直接切大頁籤（首頁/產品/FAQ/購買須知/聯絡我們）
+    const targetTab = document.querySelector('.tab[data-page="'+hash+'"]');
+    const targetPage = document.getElementById(hash);
+    if (targetTab && targetPage) {
+      tabs.forEach(t => t.classList.remove('active'));
+      pages.forEach(p => p.classList.remove('active'));
+      targetTab.classList.add('active');
+      targetPage.classList.add('active');
+      window.scrollTo({top:0, behavior:'instant'});
+    } else {
+      // 2. 處理所有子分類（只要命名有規則就能自動歸類！）
+      if (
+        // 產品介紹子分類，包含：miniBrick、mosaic、code、keychain、lamp、keychainQ、graduate、bracelet、snake、bottle、pendant、bone...
+        [
+          'miniBrick','mosaic','code','keychain','lamp','keychainQ','graduate','bracelet',
+          'snake','bottle','pendant','bone','otherWood'
+        ].includes(hash)
+      ) {
+        tabs.forEach(t => t.classList.remove('active'));
+        pages.forEach(p => p.classList.remove('active'));
+        document.querySelector('.tab[data-page="products"]').classList.add('active');
+        document.getElementById("products").classList.add('active');
+        setTimeout(()=>{
+          const targetSub = document.getElementById(hash);
+          if(targetSub) targetSub.scrollIntoView({behavior:'smooth', block:'start'});
+        }, 80);
+      } else if (
+        // FAQ子分類都以"faq-"開頭
+        hash.startsWith('faq-')
+      ) {
+        tabs.forEach(t => t.classList.remove('active'));
+        pages.forEach(p => p.classList.remove('active'));
+        document.querySelector('.tab[data-page="faq"]').classList.add('active');
+        document.getElementById("faq").classList.add('active');
+        setTimeout(()=>{
+          const targetSub = document.getElementById(hash);
+          if(targetSub) targetSub.scrollIntoView({behavior:'smooth', block:'start'});
+        }, 80);
+      } else if (
+        // 購買須知子分類都以"info-"或"price-"或"process-"開頭
+        hash.startsWith('info-') || hash.startsWith('price-') || hash.startsWith('process-')
+      ) {
+        tabs.forEach(t => t.classList.remove('active'));
+        pages.forEach(p => p.classList.remove('active'));
+        document.querySelector('.tab[data-page="info"]').classList.add('active');
+        document.getElementById("info").classList.add('active');
+        setTimeout(()=>{
+          const targetSub = document.getElementById(hash);
+          if(targetSub) targetSub.scrollIntoView({behavior:'smooth', block:'start'});
+        }, 80);
       }
+      // 聯絡我們這頁因為沒有子分類，所以不用另外判斷
     }
+  }
+}
+
     // ========= 回頂鈕顯示/隱藏 + 點擊滾動頂部 =========
     window.onscroll = function() {
       document.getElementById("backToTop").style.display =
@@ -961,6 +1141,12 @@
       makeSlider('slider-faq-keychain');
       makeSlider('slider-faq-lamp');
       makeSlider('slider-faq-bracelet');
+      makeSlider('slider-price-Material');
+      makeSlider('slider-price-substitute');
+      makeSlider('slider-price-Material-qrcode');
+      makeSlider('slider-price-substitute-qrcode');
+      makeSlider('slider-process-miniBrick');
+      makeSlider('slider-process-miniBrick-qrcode');
     });
     // ====== End ======
   </script>
