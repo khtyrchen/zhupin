@@ -488,7 +488,35 @@
 #info .infosubnav { text-align: left; }
 #info .infosubnav .subbtn { margin-left: 0; margin-right: 10px; }
 
-  </style>
+.title-with-back {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.inline-backbtn {
+  border: none;
+  background: none;
+  font-size: 1.15em;
+  color: #be873b;
+  padding: 0 5px 0 0;
+  box-shadow: none;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+.inline-backbtn .back-mobile { display: none; }
+.inline-backbtn .back-desktop { display: inline; }
+
+@media (max-width:600px) {
+  .inline-backbtn .back-desktop { display: none; }
+  .inline-backbtn .back-mobile { display: inline; font-size: 1.25em; }
+  #info-mosaic .slider-controls { display: none; }
+}
+
+ 
+ </style>
 </head>
 <body>
   <div class="banner-area">
@@ -836,20 +864,20 @@
     </div>
   </div>
   <!-- 第三層：積木畫子分類 -->
-  <div id="info-mosaic" class="subsection">
-    <div class="infosubnav">
-      <h3>積木畫</h3>
-      <a href="#price-Material" class="subbtn">材料包價格計算方式</a>
-      <a href="#price-substitute" class="subbtn">代拼價格計算方式</a>
-      <a href="#process-miniBrick" class="subbtn">訂製流程</a>
-    </div>
-      <div class="slider-controls">
-        <a href="#info-miniBrick" class="backbtn slider-backbtn">
-          <span class="back-desktop">返回</span>
-          <span class="back-mobile">↑</span>
-        </a>
-      </div>
+<div id="info-mosaic" class="subsection">
+  <div class="infosubnav title-with-back">
+    <a href="#info-miniBrick" class="backbtn inline-backbtn">
+      <span class="back-desktop">返回</span>
+      <span class="back-mobile">←</span>
+    </a>
+    <h3>積木畫</h3>
   </div>
+  <div class="infosubnav">
+    <a href="#price-Material" class="subbtn">材料包價格計算方式</a>
+    <a href="#price-substitute" class="subbtn">代拼價格計算方式</a>
+    <a href="#process-miniBrick" class="subbtn">訂製流程</a>
+  </div>
+</div>
   <!-- 第四層：積木畫詳細子頁 -->
   <div id="price-Material" class="subsection">
     <h2>材料包價格計算方式</h2>
