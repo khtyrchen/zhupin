@@ -189,7 +189,7 @@
     .backbtn:hover, .backbtn:focus { background: #be873b; color: #fff; }
 
     .slider-backbtn {
-      position: absolute; right: 8px; bottom: -1px; z-index: 10; margin: 0;
+      position: absolute; right: 8px; bottom: 6px; z-index: 10; margin: 0;
       /* 讓它永遠是「下排」：放在 .slider-container 內、但不在 .slider-controls 內 */
     }
     @media (max-width:600px){
@@ -272,6 +272,7 @@
     <img src="005.jpg" alt="雷雕金屬介紹" class="card-img">
     <img src="006.jpg" alt="雷雕木製品介紹" class="card-img">
   </div>
+
   <div id="products" class="page">
     <div class="subnav">
       <a href="#miniBrick" class="subtab">微積木</a>
@@ -279,6 +280,7 @@
       <a href="#lamp" class="subtab">客製木製品</a>
       <a href="#bracelet" class="subtab">客製不鏽鋼飾品</a>
     </div>
+
     <!-- 微積木主分類 -->
     <div id="miniBrick" class="subsection">
       <h2>微積木</h2>
@@ -286,6 +288,7 @@
       <a href="#code" class="subbtn">積木QRCODE</a>
       <img src="022.jpg" alt="微積木介紹圖" class="micro-block-banner">
     </div>
+
     <!-- =============== 積木畫 =============== -->
     <div id="mosaic" class="subsection">
       <h2>積木畫</h2>
@@ -300,21 +303,22 @@
             </video>
           </div>
         </div>
- <!-- 控制區塊（左右箭頭＋圓點） -->
-<div class="slider-controls">
-  <button class="slider-btn prev">&#8592;</button>
-  <div class="slider-dots"></div>
-  <button class="slider-btn next">&#8594;</button>
-</div>
 
-<!-- 返回鈕（單獨一行，靠右） -->
-<a href="#miniBrick" class="backbtn slider-backbtn">
-   <span class="back-desktop">返回</span>
-   <span class="back-mobile">↑</span>
-</a>
+        <!-- 控制區塊（左右箭頭＋圓點） -->
+        <div class="slider-controls">
+          <button class="slider-btn prev">&#8592;</button>
+          <div class="slider-dots"></div>
+          <button class="slider-btn next">&#8594;</button>
+        </div>
 
+        <!-- 返回鈕（單獨一行，靠右） -->
+        <a href="#miniBrick" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
       </div>
     </div>
+
     <!-- =============== 積木QRCODE =============== -->
     <div id="code" class="subsection">
       <h2>積木QRCODE</h2>
@@ -328,17 +332,20 @@
             </video>
           </div>
         </div>
+
         <div class="slider-controls">
           <button class="slider-btn prev">&#8592;</button>
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
-          <a href="#miniBrick" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
         </div>
+
+        <a href="#miniBrick" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
       </div>
     </div>
+
     <!-- =============== 浮雕夜燈 =============== -->
     <div id="keychain" class="subsection">
       <h2>浮雕夜燈</h2>
@@ -353,6 +360,7 @@
             </video>
           </div>
         </div>
+
         <div class="slider-controls">
           <button class="slider-btn prev">&#8592;</button>
           <div class="slider-dots"></div>
@@ -360,6 +368,7 @@
         </div>
       </div>
     </div>
+
     <!-- 客製木製品主分類 -->
     <div id="lamp" class="subsection">
       <h2>客製木製品</h2>
@@ -367,6 +376,7 @@
       <a href="#graduate" class="subbtn">畢業祝福木鑰匙圈</a>
       <a href="#ruler" class="subbtn">15公分木尺</a>
     </div>
+
     <!-- =============== Q版木鑰匙圈 =============== -->
     <div id="keychainQ" class="subsection">
       <h2>Q版木鑰匙圈</h2>
@@ -377,18 +387,20 @@
           <div class="slide"><img src="020.jpg" alt="Q版木鑰匙圈介紹3" style="width:100%;border-radius:24px;"></div>
           <div class="slide"><img src="021.jpg" alt="Q版木鑰匙圈介紹4" style="width:100%;border-radius:24px;"></div>
         </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+
         <div class="slider-controls">
           <button class="slider-btn prev">&#8592;</button>
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
-          <a href="#lamp" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
         </div>
+
+        <a href="#lamp" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
       </div>
     </div>
+
     <!-- =============== 畢業祝福木鑰匙圈 =============== -->
     <div id="graduate" class="subsection">
       <h2>畢業祝福木鑰匙圈</h2>
@@ -399,18 +411,20 @@
           <div class="slide"><img src="025.jpg" alt="畢業祝福木鑰匙圈介紹3" style="width:100%;border-radius:24px;"></div>
           <div class="slide"><img src="026.jpg" alt="畢業祝福木鑰匙圈介紹4" style="width:100%;border-radius:24px;"></div>
         </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+
         <div class="slider-controls">
           <button class="slider-btn prev">&#8592;</button>
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
-          <a href="#lamp" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
         </div>
+
+        <a href="#lamp" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
       </div>
     </div>
+
     <!-- =============== 15公分木尺 =============== -->
     <div id="ruler" class="subsection">
       <h2>15公分木尺</h2>
@@ -425,18 +439,20 @@
           <div class="slide"><img src="108.jpg" alt="15公分木尺介紹7" style="width:100%;border-radius:24px;"></div>
           <div class="slide"><img src="109.jpg" alt="15公分木尺介紹8" style="width:100%;border-radius:24px;"></div>
         </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+
         <div class="slider-controls">
           <button class="slider-btn prev">&#8592;</button>
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
-          <a href="#lamp" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
         </div>
+
+        <a href="#lamp" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
       </div>
     </div>
+
     <!-- 客製不鏽鋼飾品主分類 -->
     <div id="bracelet" class="subsection">
       <h2>客製不鏽鋼飾品</h2>
@@ -445,6 +461,7 @@
       <a href="#pendant" class="subbtn">造型鑰匙圈</a>
       <a href="#bone" class="subbtn">骨頭鑰匙圈</a>
     </div>
+
     <!-- =============== 蛇骨手鍊 =============== -->
     <div id="snake" class="subsection">
       <h2>蛇骨手鍊</h2>
@@ -454,18 +471,20 @@
           <div class="slide"><img src="028.jpg" alt="蛇骨手鍊介紹2" style="width:100%;border-radius:24px;"></div>
           <div class="slide"><img src="029.jpg" alt="蛇骨手鍊介紹3" style="width:100%;border-radius:24px;"></div>
         </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+
         <div class="slider-controls">
           <button class="slider-btn prev">&#8592;</button>
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
-          <a href="#bracelet" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
         </div>
+
+        <a href="#bracelet" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
       </div>
     </div>
+
     <!-- =============== 開瓶器造型鑰匙圈 =============== -->
     <div id="bottle" class="subsection">
       <h2>開瓶器造型鑰匙圈</h2>
@@ -474,18 +493,20 @@
           <div class="slide"><img src="031.jpg" alt="開瓶器造型鑰匙圈介紹1" style="width:100%;border-radius:24px;"></div>
           <div class="slide"><img src="030.jpg" alt="開瓶器造型鑰匙圈介紹2" style="width:100%;border-radius:24px;"></div>
         </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+
         <div class="slider-controls">
           <button class="slider-btn prev">&#8592;</button>
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
-          <a href="#bracelet" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
         </div>
+
+        <a href="#bracelet" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
       </div>
     </div>
+
     <!-- =============== 造型鑰匙圈 =============== -->
     <div id="pendant" class="subsection">
       <h2>造型鑰匙圈</h2>
@@ -496,18 +517,20 @@
           <div class="slide"><img src="034.jpg" alt="造型鑰匙圈介紹3" style="width:100%;border-radius:24px;"></div>
           <div class="slide"><img src="035.jpg" alt="造型鑰匙圈介紹4" style="width:100%;border-radius:24px;"></div>
         </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+
         <div class="slider-controls">
           <button class="slider-btn prev">&#8592;</button>
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
-          <a href="#bracelet" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
         </div>
+
+        <a href="#bracelet" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
       </div>
     </div>
+
     <!-- =============== 骨頭鑰匙圈 =============== -->
     <div id="bone" class="subsection">
       <h2>骨頭鑰匙圈</h2>
@@ -519,20 +542,22 @@
           <div class="slide"><img src="039.jpg" alt="骨頭鑰匙圈介紹4" style="width:100%;border-radius:24px;"></div>
           <div class="slide"><img src="040.jpg" alt="骨頭鑰匙圈介紹5" style="width:100%;border-radius:24px;"></div>
         </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+
         <div class="slider-controls">
           <button class="slider-btn prev">&#8592;</button>
           <div class="slider-dots"></div>
           <button class="slider-btn next">&#8594;</button>
-          <a href="#bracelet" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
         </div>
+
+        <a href="#bracelet" class="backbtn slider-backbtn">
+          <span class="back-desktop">返回</span>
+          <span class="back-mobile">↑</span>
+        </a>
       </div>
     </div>
     <!-- ... -->
   </div>
+
   <div id="faq" class="page">
     <div class="subnav">
       <a href="#faq-miniBrick" class="subtab">微積木</a>
@@ -610,6 +635,7 @@
       </div>
     </div>
   </div>
+
 <!-- =============== 購買須知 =============== -->
 <div id="info" class="page">
   <!-- 第一層：主分類 -->
@@ -627,155 +653,140 @@
       <a href="#info-mosaic" class="subbtn">積木畫</a>
       <a href="#info-qrcode" class="subbtn">積木QRCODE</a>
       <img src="022.jpg" alt="微積木介紹圖" class="micro-block-banner">
-      <!-- 你如果有其他微積木細項也可加 -->
     </div>
   </div>
 
-<!-- 第三層：積木畫子分類 -->
-<div id="info-mosaic" class="subsection">
-  <div class="infosubnav">
-    <h2>積木畫</h2>
-    <a href="#price-Material" class="subbtn">材料包價格計算方式</a>
-    <a href="#price-substitute" class="subbtn">代拼價格計算方式</a>
-    <a href="#process-miniBrick" class="subbtn">訂製流程</a>
-    <a href="#info-miniBrick" class="subbtn">返回微積木</a>
-    </a>
+  <!-- 第三層：積木畫子分類 -->
+  <div id="info-mosaic" class="subsection">
+    <div class="infosubnav">
+      <h2>積木畫</h2>
+      <a href="#price-Material" class="subbtn">材料包價格計算方式</a>
+      <a href="#price-substitute" class="subbtn">代拼價格計算方式</a>
+      <a href="#process-miniBrick" class="subbtn">訂製流程</a>
+      <a href="#info-miniBrick" class="subbtn">返回微積木</a>
+    </div>
   </div>
-</div>
 
   <!-- 第四層：積木畫詳細子分類 -->
-    <div id="price-Material" class="subsection">
-      <h2>材料包價格計算方式</h2>
-      <div class="slider-container" id="slider-price-Material">
-        <div class="slider-wrapper">
+  <div id="price-Material" class="subsection">
+    <h2>材料包價格計算方式</h2>
+    <div class="slider-container" id="slider-price-Material">
+      <div class="slider-wrapper">
         <div class="slide"><img src="054.jpg" alt="材料包1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="055.jpg" alt="材料包2" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="056.jpg" alt="材料包3" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-mosaic" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-mosaic" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
-    <div id="price-substitute" class="subsection">
-      <h2>代拼價格計算方式</h2>
-      <div class="slider-container" id="slider-price-substitute">
-        <div class="slider-wrapper">
+  <div id="price-substitute" class="subsection">
+    <h2>代拼價格計算方式</h2>
+    <div class="slider-container" id="slider-price-substitute">
+      <div class="slider-wrapper">
         <div class="slide"><img src="057.jpg" alt="代拼1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="058.jpg" alt="代拼2" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="059.jpg" alt="代拼3" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-mosaic" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-mosaic" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
-    <div id="process-miniBrick" class="subsection">
-      <h2>訂製流程</h2>
-      <div class="slider-container" id="slider-process-miniBrick">
-        <div class="slider-wrapper">
+  <div id="process-miniBrick" class="subsection">
+    <h2>訂製流程</h2>
+    <div class="slider-container" id="slider-process-miniBrick">
+      <div class="slider-wrapper">
         <div class="slide"><img src="062.jpg" alt="訂製流程1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="063.jpg" alt="訂製流程2" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-mosaic" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-mosaic" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
-<!-- 第三層：積木QRCODE子分類 -->
-<div id="info-qrcode" class="subsection">
-  <div class="infosubnav">
-    <h2>積木QRCODE</h2>
+  <!-- 第三層：積木QRCODE子分類 -->
+  <div id="info-qrcode" class="subsection">
+    <div class="infosubnav">
+      <h2>積木QRCODE</h2>
       <a href="#price-Material-qrcode" class="subbtn">材料包價格計算方式</a>
       <a href="#price-substitute-qrcode" class="subbtn">代拼價格計算方式</a>
       <a href="#process-miniBrick-qrcode" class="subbtn">訂製流程</a>
       <a href="#info-miniBrick" class="subbtn">返回微積木</a>
-    </a>
+    </div>
   </div>
-</div>
 
-  <!-- 第四層：積木畫詳細子分類 -->
-    <div id="price-Material-qrcode" class="subsection">
-      <h2>材料包價格計算方式</h2>
-      <div class="slider-container" id="slider-price-Material-qrcode">
-        <div class="slider-wrapper">
+  <!-- 第四層：積木QRCODE詳細子分類 -->
+  <div id="price-Material-qrcode" class="subsection">
+    <h2>材料包價格計算方式</h2>
+    <div class="slider-container" id="slider-price-Material-qrcode">
+      <div class="slider-wrapper">
         <div class="slide"><img src="060.jpg" alt="QRCODE材料包1" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-qrcode" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-qrcode" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
-    <div id="price-substitute-qrcode" class="subsection">
-      <h2>代拼價格計算方式</h2>
-      <div class="slider-container" id="slider-price-substitute-qrcode">
-        <div class="slider-wrapper">
+  <div id="price-substitute-qrcode" class="subsection">
+    <h2>代拼價格計算方式</h2>
+    <div class="slider-container" id="slider-price-substitute-qrcode">
+      <div class="slider-wrapper">
         <div class="slide"><img src="061.jpg" alt="QRCODE代拼1" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-qrcode" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-qrcode" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
-    <div id="process-miniBrick-qrcode" class="subsection">
-      <h2>訂製流程</h2>
-      <div class="slider-container" id="slider-process-miniBrick-qrcode">
-        <div class="slider-wrapper">
+  <div id="process-miniBrick-qrcode" class="subsection">
+    <h2>訂製流程</h2>
+    <div class="slider-container" id="slider-process-miniBrick-qrcode">
+      <div class="slider-wrapper">
         <div class="slide"><img src="064.jpg" alt="QRCODE訂製1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="065.jpg" alt="QRCODE訂製2" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-qrcode" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-qrcode" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
   <!-- 第二層：浮雕夜燈子分類 -->
   <div id="info-keychain" class="subsection">
@@ -787,45 +798,41 @@
   </div>
 
   <!-- 第三層：浮雕夜燈詳細子頁 -->
-    <div id="price-keychain" class="subsection">
-      <h2>價格計算方式</h2>
-      <div class="slider-container" id="slider-price-keychain">
-        <div class="slider-wrapper">
+  <div id="price-keychain" class="subsection">
+    <h2>價格計算方式</h2>
+    <div class="slider-container" id="slider-price-keychain">
+      <div class="slider-wrapper">
         <div class="slide"><img src="066.jpg" alt="浮雕夜燈價格1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="067.jpg" alt="浮雕夜燈價格2" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-keychain" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-keychain" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
-    <div id="process-keychain" class="subsection">
-      <h2>訂製流程</h2>
-      <div class="slider-container" id="slider-process-keychain">
-        <div class="slider-wrapper">
+  <div id="process-keychain" class="subsection">
+    <h2>訂製流程</h2>
+    <div class="slider-container" id="slider-process-keychain">
+      <div class="slider-wrapper">
         <div class="slide"><img src="068.jpg" alt="浮雕夜燈訂製1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="069.jpg" alt="浮雕夜燈訂製2" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-keychain" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-keychain" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
   <!-- 第二層：客製木製品子分類 -->
   <div id="info-lamp" class="subsection">
@@ -838,414 +845,378 @@
     </div>
   </div>
 
-<!-- 第三層：Q版木鑰匙圈子分類 -->
-<div id="info-keychainQ" class="subsection">
-  <div class="infosubnav">
-    <h2>Q版木鑰匙圈</h2>
+  <!-- 第三層：Q版木鑰匙圈子分類 -->
+  <div id="info-keychainQ" class="subsection">
+    <div class="infosubnav">
+      <h2>Q版木鑰匙圈</h2>
       <a href="#price-keychainQ" class="subbtn">價格計算方式</a>
       <a href="#process-keychainQ" class="subbtn">訂製流程</a>
       <a href="#info-lamp" class="subbtn">返回木製品</a>
-    </a>
+    </div>
   </div>
-</div>
 
   <!-- 第四層：Q版木鑰匙圈詳細子分類 -->
-    <div id="price-keychainQ" class="subsection">
-      <h2>價格計算方式</h2>
-      <div class="slider-container" id="slider-price-keychainQ">
-        <div class="slider-wrapper">
+  <div id="price-keychainQ" class="subsection">
+    <h2>價格計算方式</h2>
+    <div class="slider-container" id="slider-price-keychainQ">
+      <div class="slider-wrapper">
         <div class="slide"><img src="071.jpg" alt="Q版木鑰匙圈價格1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="072.jpg" alt="Q版木鑰匙圈價格2" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-keychainQ" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-keychainQ" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
-    <div id="process-keychainQ" class="subsection">
-      <h2>訂製流程</h2>
-      <div class="slider-container" id="slider-process-keychainQ">
-        <div class="slider-wrapper">
+  <div id="process-keychainQ" class="subsection">
+    <h2>訂製流程</h2>
+    <div class="slider-container" id="slider-process-keychainQ">
+      <div class="slider-wrapper">
         <div class="slide"><img src="073.jpg" alt="Q版木鑰匙圈訂製1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="074.jpg" alt="Q版木鑰匙圈訂製2" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-keychainQ" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-keychainQ" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
-<!-- 第三層：畢業祝福木鑰匙圈子分類 -->
-<div id="info-graduate" class="subsection">
-  <div class="infosubnav">
-    <h2>畢業祝福木鑰匙圈</h2>
+  <!-- 第三層：畢業祝福木鑰匙圈子分類 -->
+  <div id="info-graduate" class="subsection">
+    <div class="infosubnav">
+      <h2>畢業祝福木鑰匙圈</h2>
       <a href="#price-graduate-Public" class="subbtn">可選樣式</a>
       <a href="#price-graduate" class="subbtn">價格計算方式</a>
       <a href="#process-graduate" class="subbtn">訂製流程</a>
       <a href="#info-lamp" class="subbtn">返回木製品</a>
-    </a>
+    </div>
   </div>
-</div>
 
   <!-- 第四層：畢業祝福木鑰匙圈詳細子分類 -->
-    <div id="price-graduate-Public" class="subsection">
-      <h2>可選樣式</h2>
-      <div class="slider-container" id="slider-price-graduate-Public">
-        <div class="slider-wrapper">
+  <div id="price-graduate-Public" class="subsection">
+    <h2>可選樣式</h2>
+    <div class="slider-container" id="slider-price-graduate-Public">
+      <div class="slider-wrapper">
         <div class="slide"><img src="078.jpg" alt="學士帽+畢業證書" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="079.jpg" alt="畢業證書" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="080.jpg" alt="學士帽" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="081.jpg" alt="學士服" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-graduate" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
-    </div>
-
-<div id="price-graduate" class="subsection">
-  <h2>價格計算方式</h2>
-  <div class="slider-container" id="slider-price-graduate">
-    <div class="slider-wrapper">
-      <div class="slide"><img src="075.jpg" alt="畢業祝福木鑰匙圈價格1" style="width:100%;border-radius:24px;"></div>
-    </div>
-    <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-    <div class="slider-controls">
-      <button class="slider-btn prev">&#8592;</button>
-      <div class="slider-dots"></div>
-      <button class="slider-btn next">&#8594;</button>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
       <a href="#info-graduate" class="backbtn slider-backbtn">
-         <span class="back-desktop">返回</span>
-         <span class="back-mobile">↑</span>
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
       </a>
     </div>
   </div>
-</div>
 
-<div id="process-graduate" class="subsection">
-  <h2>訂製流程</h2>
-  <div class="slider-container" id="slider-process-graduate">
-    <div class="slider-wrapper">
+  <div id="price-graduate" class="subsection">
+    <h2>價格計算方式</h2>
+    <div class="slider-container" id="slider-price-graduate">
+      <div class="slider-wrapper">
+        <div class="slide"><img src="075.jpg" alt="畢業祝福木鑰匙圈價格1" style="width:100%;border-radius:24px;"></div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-graduate" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
+    </div>
+  </div>
+
+  <div id="process-graduate" class="subsection">
+    <h2>訂製流程</h2>
+    <div class="slider-container" id="slider-process-graduate">
+      <div class="slider-wrapper">
         <div class="slide"><img src="076.jpg" alt="畢業祝福木鑰匙圈訂製1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="077.jpg" alt="畢業祝福木鑰匙圈訂製2" style="width:100%;border-radius:24px;"></div>
-    </div>
-    <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-    <div class="slider-controls">
-      <button class="slider-btn prev">&#8592;</button>
-      <div class="slider-dots"></div>
-      <button class="slider-btn next">&#8594;</button>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
       <a href="#info-graduate" class="backbtn slider-backbtn">
-         <span class="back-desktop">返回</span>
-         <span class="back-mobile">↑</span>
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
       </a>
     </div>
   </div>
-</div>
 
-<!-- 第三層：15公分木尺子分類 -->
-<div id="info-ruler" class="subsection">
-  <div class="infosubnav">
-    <h2>15公分木尺</h2>
-    <h2>六種款式可直接選購,或者來圖客製專屬於你的木尺</h2>
+  <!-- 第三層：15公分木尺子分類 -->
+  <div id="info-ruler" class="subsection">
+    <div class="infosubnav">
+      <h2>15公分木尺</h2>
+      <h2>六種款式可直接選購,或者來圖客製專屬於你的木尺</h2>
       <a href="#price-ruler-Public" class="subbtn">可選樣式</a>
       <a href="#price-ruler" class="subbtn">價格計算方式</a>
       <a href="#process-ruler" class="subbtn">訂製流程</a>
       <a href="#info-lamp" class="subbtn">返回木製品</a>
-    </a>
+    </div>
   </div>
-</div>
 
   <!-- 第四層：15公分木尺詳細子分類 -->
-    <div id="price-ruler-Public" class="subsection">
-      <h2>可選樣式</h2>
-      <div class="slider-container" id="slider-price-ruler-Public">
-        <div class="slider-wrapper">
+  <div id="price-ruler-Public" class="subsection">
+    <h2>可選樣式</h2>
+    <div class="slider-container" id="slider-price-ruler-Public">
+      <div class="slider-wrapper">
         <div class="slide"><img src="112.jpg" alt="純素色" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="113.jpg" alt="咖啡" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="114.jpg" alt="豆豆" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="115.jpg" alt="逃家仔" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="116.jpg" alt="小不點" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="117.jpg" alt="蠟筆" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-graduate" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-ruler" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
   <!-- 第二層：客製不鏽鋼飾品子分頁 -->
   <div id="info-bracelet" class="subsection">
     <div class="infosubnav">
       <h2>客製不鏽鋼飾品</h2>
-    <a href="#info-snake" class="subbtn">蛇骨手鍊</a>
-    <a href="#info-bottle" class="subbtn">開瓶器造型鑰匙圈</a>
-    <a href="#info-pendant" class="subbtn">造型鑰匙圈</a>
-    <a href="#info-bone" class="subbtn">骨頭鑰匙圈</a>
-    <a href="#info-version" class="subbtn">訂製流程</a>
-    <img src="082.jpg" alt="雷雕不鏽鋼介紹圖" class="micro-block-banner">
+      <a href="#info-snake" class="subbtn">蛇骨手鍊</a>
+      <a href="#info-bottle" class="subbtn">開瓶器造型鑰匙圈</a>
+      <a href="#info-pendant" class="subbtn">造型鑰匙圈</a>
+      <a href="#info-bone" class="subbtn">骨頭鑰匙圈</a>
+      <a href="#info-version" class="subbtn">訂製流程</a>
+      <img src="082.jpg" alt="雷雕不鏽鋼介紹圖" class="micro-block-banner">
     </div>
   </div>
 
-<!-- 第三層：蛇骨手鍊子分類 -->
-<div id="info-snake" class="subsection">
-  <div class="infosubnav">
-    <h2>蛇骨手鍊</h2>
+  <!-- 第三層：蛇骨手鍊子分類 -->
+  <div id="info-snake" class="subsection">
+    <div class="infosubnav">
+      <h2>蛇骨手鍊</h2>
       <a href="#price-snake-Public" class="subbtn">可選樣式</a>
       <a href="#price-snake" class="subbtn">價格計算方式</a>
       <a href="#info-bracelet" class="subbtn">返回不鏽鋼</a>
-    </a>
+    </div>
   </div>
-</div>
 
   <!-- 第四層：蛇骨手鍊詳細子分類 -->
-    <div id="price-snake-Public" class="subsection">
-      <h2>可選樣式</h2>
-      <div class="slider-container" id="slider-price-snake-Public">
-        <div class="slider-wrapper">
+  <div id="price-snake-Public" class="subsection">
+    <h2>可選樣式</h2>
+    <div class="slider-container" id="slider-price-snake-Public">
+      <div class="slider-wrapper">
         <div class="slide"><img src="090.jpg" alt="蛇骨手鍊1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="091.jpg" alt="蛇骨手鍊2" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="092.jpg" alt="蛇骨手鍊3" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-snake" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-snake" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
-    <div id="price-snake" class="subsection">
-      <h2>價格計算方式</h2>
-      <div class="slider-container" id="slider-price-snake">
-        <div class="slider-wrapper">
+  <div id="price-snake" class="subsection">
+    <h2>價格計算方式</h2>
+    <div class="slider-container" id="slider-price-snake">
+      <div class="slider-wrapper">
         <div class="slide"><img src="083.jpg" alt="蛇骨手鍊價格1" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-snake" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-snake" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
-<!-- 第三層：開瓶器造型鑰匙圈子分類 -->
-<div id="info-bottle" class="subsection">
-  <div class="infosubnav">
-    <h2>開瓶器造型鑰匙圈</h2>
+  <!-- 第三層：開瓶器造型鑰匙圈子分類 -->
+  <div id="info-bottle" class="subsection">
+    <div class="infosubnav">
+      <h2>開瓶器造型鑰匙圈</h2>
       <a href="#price-bottle-Public" class="subbtn">可選樣式</a>
       <a href="#price-bottle" class="subbtn">價格計算方式</a>
       <a href="#info-bracelet" class="subbtn">返回不鏽鋼</a>
-    </a>
+    </div>
   </div>
-</div>
 
   <!-- 第四層：開瓶器造型鑰匙圈詳細子分類 -->
-    <div id="price-bottle-Public" class="subsection">
-      <h2>可選樣式</h2>
-      <div class="slider-container" id="slider-price-bottle-Public">
-        <div class="slider-wrapper">
+  <div id="price-bottle-Public" class="subsection">
+    <h2>可選樣式</h2>
+    <div class="slider-container" id="slider-price-bottle-Public">
+      <div class="slider-wrapper">
         <div class="slide"><img src="093.jpg" alt="開瓶器造型鑰匙圈1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="094.jpg" alt="開瓶器造型鑰匙圈2" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-bottle" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-bottle" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
-    <div id="price-bottle" class="subsection">
-      <h2>價格計算方式</h2>
-      <div class="slider-container" id="slider-price-bottle">
-        <div class="slider-wrapper">
+  <div id="price-bottle" class="subsection">
+    <h2>價格計算方式</h2>
+    <div class="slider-container" id="slider-price-bottle">
+      <div class="slider-wrapper">
         <div class="slide"><img src="084.jpg" alt="開瓶器造型鑰匙圈價格1" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-bottle" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-bottle" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
-<!-- 第三層：造型鑰匙圈子分類 -->
-<div id="info-pendant" class="subsection">
-  <div class="infosubnav">
-    <h2>造型鑰匙圈</h2>
+  <!-- 第三層：造型鑰匙圈子分類 -->
+  <div id="info-pendant" class="subsection">
+    <div class="infosubnav">
+      <h2>造型鑰匙圈</h2>
       <a href="#price-pendant-Public" class="subbtn">可選樣式</a>
       <a href="#price-pendant" class="subbtn">價格計算方式</a>
       <a href="#info-bracelet" class="subbtn">返回不鏽鋼</a>
-    </a>
+    </div>
   </div>
-</div>
 
   <!-- 第四層：造型鑰匙圈詳細子分類 -->
-    <div id="price-pendant-Public" class="subsection">
-      <h2>可選樣式</h2>
-      <div class="slider-container" id="slider-price-pendant-Public">
-        <div class="slider-wrapper">
+  <div id="price-pendant-Public" class="subsection">
+    <h2>可選樣式</h2>
+    <div class="slider-container" id="slider-price-pendant-Public">
+      <div class="slider-wrapper">
         <div class="slide"><img src="100.jpg" alt="造型鑰匙圈1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="101.jpg" alt="造型鑰匙圈2" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="102.jpg" alt="造型鑰匙圈3" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="103.jpg" alt="造型鑰匙圈4" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-pendant" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-pendant" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
-    <div id="price-pendant" class="subsection">
-      <h2>價格計算方式</h2>
-      <div class="slider-container" id="slider-price-pendant">
-        <div class="slider-wrapper">
+  <div id="price-pendant" class="subsection">
+    <h2>價格計算方式</h2>
+    <div class="slider-container" id="slider-price-pendant">
+      <div class="slider-wrapper">
         <div class="slide"><img src="085.jpg" alt="造型鑰匙圈價格1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="086.jpg" alt="造型鑰匙圈價格2" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-pendant" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-pendant" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
-
-<!-- 第三層：骨頭鑰匙圈子分類 -->
-<div id="info-bone" class="subsection">
-  <div class="infosubnav">
-    <h2>骨頭鑰匙圈</h2>
-    <a href="#price-bone-Public" class="subbtn">可選樣式</a>
-    <a href="#price-bone" class="subbtn">價格計算方式</a>
-      <a href="#info-bracelet" class="subbtn">返回不鏽鋼</a>
-    </a>
   </div>
-</div>
+
+  <!-- 第三層：骨頭鑰匙圈子分類 -->
+  <div id="info-bone" class="subsection">
+    <div class="infosubnav">
+      <h2>骨頭鑰匙圈</h2>
+      <a href="#price-bone-Public" class="subbtn">可選樣式</a>
+      <a href="#price-bone" class="subbtn">價格計算方式</a>
+      <a href="#info-bracelet" class="subbtn">返回不鏽鋼</a>
+    </div>
+  </div>
 
   <!-- 第四層：骨頭鑰匙圈詳細子分類 -->
-    <div id="price-bone-Public" class="subsection">
-      <h2>可選樣式</h2>
-      <div class="slider-container" id="slider-price-bone-Public">
-        <div class="slider-wrapper">
+  <div id="price-bone-Public" class="subsection">
+    <h2>可選樣式</h2>
+    <div class="slider-container" id="slider-price-bone-Public">
+      <div class="slider-wrapper">
         <div class="slide"><img src="095.jpg" alt="骨頭鑰匙圈1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="096.jpg" alt="骨頭鑰匙圈2" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="097.jpg" alt="骨頭鑰匙圈3" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="098.jpg" alt="骨頭鑰匙圈4" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="099.jpg" alt="骨頭鑰匙圈5" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-bone" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-bone" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
-    <div id="price-bone" class="subsection">
-      <h2>價格計算方式</h2>
-      <div class="slider-container" id="slider-price-bone">
-        <div class="slider-wrapper">
+  <div id="price-bone" class="subsection">
+    <h2>價格計算方式</h2>
+    <div class="slider-container" id="slider-price-bone">
+      <div class="slider-wrapper">
         <div class="slide"><img src="087.jpg" alt="骨頭鑰匙圈價格1" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-          <a href="#info-bone" class="backbtn slider-backbtn">
-             <span class="back-desktop">返回</span>
-             <span class="back-mobile">↑</span>
-          </a>
-        </div>
       </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
+      </div>
+      <a href="#info-bone" class="backbtn slider-backbtn">
+        <span class="back-desktop">返回</span><span class="back-mobile">↑</span>
+      </a>
     </div>
+  </div>
 
   <!-- 第三層：訂製流程子頁（不鏽鋼飾品流程） -->
-    <div id="info-version" class="subsection">
-      <h2>可選樣式</h2>
-      <div class="slider-container" id="slider-info-version">
-        <div class="slider-wrapper">
+  <div id="info-version" class="subsection">
+    <h2>可選樣式</h2>
+    <div class="slider-container" id="slider-info-version">
+      <div class="slider-wrapper">
         <div class="slide"><img src="088.jpg" alt="鑰匙圈訂製流程1" style="width:100%;border-radius:24px;"></div>
         <div class="slide"><img src="089.jpg" alt="鑰匙圈訂製流程2" style="width:100%;border-radius:24px;"></div>
-        </div>
-        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
-        <div class="slider-controls">
-          <button class="slider-btn prev">&#8592;</button>
-          <div class="slider-dots"></div>
-          <button class="slider-btn next">&#8594;</button>
-        </div>
+      </div>
+      <div class="slider-controls">
+        <button class="slider-btn prev">&#8592;</button>
+        <div class="slider-dots"></div>
+        <button class="slider-btn next">&#8594;</button>
       </div>
     </div>
-
-
-
   </div>
+
+</div>
+
+
 </div>
 
 <!-- =============== 聯絡我們 =============== -->
