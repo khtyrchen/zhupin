@@ -31,18 +31,13 @@
       transition: all 0.2s;
     }
     @media (max-width: 600px) {
-      .banner-area {
-        height: 90px;
-        min-height: 60px;
-      }
+      .banner-area { height: 90px; min-height: 60px; }
       .banner-area img {
-        width: 100%;
-        height: 100%;
-        max-width: none;
-        object-fit: cover;
-        border-radius: 0;
+        width: 100%; height: 100%; max-width: none;
+        object-fit: cover; border-radius: 0;
       }
     }
+
     nav {
       text-align: center;
       margin-top: 0;
@@ -50,39 +45,19 @@
       border-bottom: 1px solid #ddd;
     }
     nav button {
-      background: none;
-      border: none;
-      font-size: 1.1rem;
-      padding: 18px 32px;
-      margin: 0 8px;
-      color: #333;
-      cursor: pointer;
-      border-bottom: 3px solid transparent;
-      font-weight: bold;
-      letter-spacing: 2px;
+      background: none; border: none; font-size: 1.1rem;
+      padding: 18px 32px; margin: 0 8px; color: #333; cursor: pointer;
+      border-bottom: 3px solid transparent; font-weight: bold; letter-spacing: 2px;
       transition: border-bottom .2s;
     }
-    nav button.active {
-      border-bottom: 3px solid #be873b;
-      color: #be873b;
-    }
+    nav button.active { border-bottom: 3px solid #be873b; color: #be873b; }
     @media (max-width: 700px) {
       .banner-area img { border-radius: 0 0 8vw 8vw; }
-      nav {
-        display: block;
-        text-align: center;
-        padding-bottom: 1px;
-      }
-      nav button {
-        font-size: 1em;
-        padding: 12px 8px;
-        margin: 4px 2px;
-        min-width: 0;
-        white-space: normal;
-        flex: none;
-      }
+      nav { display: block; text-align: center; padding-bottom: 1px; }
+      nav button { font-size: 1em; padding: 12px 8px; margin: 4px 2px; min-width: 0; white-space: normal; flex: none; }
       .page { padding: 8vw 4vw; margin-top: 6vw; }
     }
+
     .page {
       display: none;
       max-width: 900px;
@@ -93,458 +68,191 @@
       box-shadow: 0 2px 14px #0001;
     }
     .page.active { display: block; }
+
     .card-img {
-      display: block;
-      max-width: 100%;
-      border-radius: 24px;
-      box-shadow: 0 2px 14px #0003;
-      margin: 0 auto 28px auto;
+      display: block; max-width: 100%; border-radius: 24px;
+      box-shadow: 0 2px 14px #0003; margin: 0 auto 28px auto;
     }
+
     .micro-block-banner {
-      width: 100%;
-      max-width: 750px;
-      display: block;
-      margin: 32px auto 24px auto;
-      border-radius: 20px;
-      box-shadow: 0 2px 14px #0002;
+      width: 100%; max-width: 750px; display: block;
+      margin: 32px auto 24px auto; border-radius: 20px; box-shadow: 0 2px 14px #0002;
     }
     @media (max-width: 600px) {
       .micro-block-banner {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        margin-left: calc(-50vw + 50%);
-        border-radius: 0;
-        margin-top: 18px;
-        margin-bottom: 10px;
+        width: 100vw !important; max-width: 100vw !important;
+        margin-left: calc(-50vw + 50%); border-radius: 0; margin-top: 18px; margin-bottom: 10px;
       }
     }
-    .subnav {
-      text-align: center;
-      margin-bottom: 20px;
-    }
+
+    .subnav { text-align: center; margin-bottom: 20px; }
     .subbtn {
-      background: #fff;
-      color: #222;
-      display: inline-block;
-      padding: 10px 26px;
-      margin: 0 10px 12px 10px;
-      border-radius: 18px;
-      font-weight: bold;
-      font-size: 1.08em;
-      letter-spacing: 2px;
-      border: none;
-      outline: none;
-      text-decoration: none;
-      box-shadow: 0 2px 6px #0001;
-      transition: background 0.2s, color 0.18s;
-      border: 1.5px solid #be873b;
+      background: #fff; color: #222; display: inline-block; padding: 10px 26px;
+      margin: 0 10px 12px 10px; border-radius: 18px; font-weight: bold; font-size: 1.08em;
+      letter-spacing: 2px; border: none; outline: none; text-decoration: none;
+      box-shadow: 0 2px 6px #0001; transition: background 0.2s, color 0.18s; border: 1.5px solid #be873b;
     }
-    .subbtn:hover, .subbtn:focus {
-      background: #be873b;
-      color: #fff;
-    }
+    .subbtn:hover, .subbtn:focus { background: #be873b; color: #fff; }
     @media (max-width: 600px) {
-      .subbtn {
-        font-size: 0.95em;
-        padding: 7px 14px;
-        border-radius: 14px;
-        margin: 0 4px 10px 4px;
-      }
+      .subbtn { font-size: 0.95em; padding: 7px 14px; border-radius: 14px; margin: 0 4px 10px 4px; }
     }
+
     .subnav .subtab {
-      background: #f8f8f8;
-      border: none;
-      font-size: 1em;
-      padding: 10px 20px;
-      margin: 0 4px;
-      color: #333;
-      cursor: pointer;
-      border-bottom: 2px solid transparent;
-      font-weight: bold;
-      border-radius: 20px 20px 0 0;
-      transition: border-bottom .2s, color .2s, background .2s;
-      display: inline-block;
-      text-decoration: none;
+      background: #f8f8f8; border: none; font-size: 1em; padding: 10px 20px; margin: 0 4px;
+      color: #333; cursor: pointer; border-bottom: 2px solid transparent; font-weight: bold;
+      border-radius: 20px 20px 0 0; transition: border-bottom .2s, color .2s, background .2s;
+      display: inline-block; text-decoration: none;
     }
-    .subnav .subtab:hover,
-    .subnav .subtab:focus {
-      background: #be873b;
-      color: #fff;
-      border-bottom: 2px solid #be873b;
-    }
+    .subnav .subtab:hover, .subnav .subtab:focus { background: #be873b; color: #fff; border-bottom: 2px solid #be873b; }
+
     .subsection {
-      margin-bottom: 36px;
-      padding: 16px 0;
-      border-bottom: 1px dashed #ccc;
-      position: relative; /* 為了定位返回鈕 */
+      margin-bottom: 36px; padding: 16px 0; border-bottom: 1px dashed #ccc; position: relative;
     }
-    .subsection + .subsection {
-      border-top: none;
-    }
+    .subsection + .subsection { border-top: none; }
+
     @media (max-width: 600px) {
-      .subnav {
-        display: block;
-        overflow-x: visible;
-        white-space: normal;
-        margin-bottom: 10px;
-        text-align: center;
-      }
-      .subnav .subtab {
-        font-size: 0.95em;
-        padding: 7px 12px;
-        margin: 4px 2px;
-        min-width: 0;
-        display: inline-block;
-        box-sizing: border-box;
-      }
+      .subnav { display: block; overflow-x: visible; white-space: normal; margin-bottom: 10px; text-align: center; }
+      .subnav .subtab { font-size: 0.95em; padding: 7px 12px; margin: 4px 2px; min-width: 0; display: inline-block; box-sizing: border-box; }
+      #home img.card-img { width: 100vw !important; max-width: 100vw !important; margin-left: calc(-50vw + 50%); border-radius: 0; }
     }
-    @media (max-width: 600px) {
-      #home img.card-img {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        margin-left: calc(-50vw + 50%);
-        border-radius: 0;
-      }
-    }
-/* --------- 滑動輪播(共用) --------- */
-.slider-container {
-  width: 100%;                    /* 預設桌機時最多 750px 寬 */
-  max-width: 750px;
-  margin: 0 auto 28px auto;       /* 上0，左右置中，下28px留白 */
-  overflow: hidden;               /* 超出內容隱藏（防止溢出） */
-  position: relative;             /* 父層要相對定位，方便控制列/返回鈕絕對定位於內部 */
-  border-radius: 24px;            /* 桌機圓角視覺 */
-  box-shadow: 0 2px 14px #0003;   /* 微陰影增加層次 */
-  background: #fff;
-  padding-bottom: 55px;           /* 下方多留55px，避免輪播控制列和返回鈕壓到底部 */
-}
 
-/* ---------------- 手機板（<=600px）輪播設定（上排：箭頭+點點；下排：↑靠右） ---------------- */
-@media (max-width:600px){
-  .slider-container { 
-    width: 100vw !important;
-    max-width: 100vw !important;
-    margin-left: calc(-50vw + 50%) !important;
-    border-radius: 0;
-    /* 留足空間讓上排控制列+下排↑不擋住 */
-    padding-bottom: 96px !important;
-    aspect-ratio: 4 / 3;
-    height: auto !important;
-    min-height: unset !important;
-    position: relative; /* 讓下排↑以容器為定位基準 */
-  }
-
-  .slide img, .slide video {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-    border-radius: 0 !important;
-    display: block;
-  }
-
-  /* 上排（左右箭頭＋點點）維持不變，只是整排往上抬，給下面↑留位置 */
-  .slider-controls {
-    bottom: 56px !important;   /* 視需要可調 48~72px */
-    gap: 10px;
-  }
-
-  /* 下排：返回↑固定在容器最底右側，單獨一排 */
-  .slider-backbtn {
-    position: absolute !important;  /* 關鍵：獨立於上排控制列 */
-    right: 12px !important;         /* 靠右 */
-    bottom: 10px !important;        /* 靠底 */
-    z-index: 10;                    /* 以防被遮住 */
-    padding: 6px 12px;
-    font-size: 0.9em;
-    border-radius: 12px;
-  }
-
-  /* 點點略縮小，圖片多時不擁擠（可調整或拿掉） */
-  .slider-dot {
-    width: 9px !important;
-    height: 9px !important;
-    margin: 0 1px !important;
-  }
-}
-
-
-/* ---------------- 輪播內容排列 ---------------- */
-.slider-wrapper {
-  display: flex;                                   /* 所有slide水平排成一排 */
-  transition: transform 0.35s cubic-bezier(.45,.1,.57,1.1);  /* 動畫滑動 */
-  will-change: transform;
-}
-
-/* 每個slide寬度佔滿container，內容置中 */
-.slide {
-  min-width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-/* ---------------- 輪播控制列（左右箭頭＋中間點點） ---------------- */
-/* 絕對定位於輪播底部，gap調整間距 */
-.slider-controls {
-  position: absolute;
-  left: 0; right: 0;
-  bottom: 10px;             /* 桌機控制列離底部10px */
-  width: 100%;
-  display: flex;
-  align-items: center;      /* 垂直置中 */
-  justify-content: center;  /* 水平置中 */
-  gap: 16px;                /* 桌機按鈕與點點間距 */
-  margin: 0;                /* 移除margin，防止多餘空白 */
-}
-@media (max-width:600px){
-  .slider-controls {
-    bottom: 8px;            /* 手機控制列更貼近底部 */
-    gap: 10px;              /* 點點和按鈕距離縮小 */
-  }
-}
-
-/* ---------------- 輪播左右箭頭按鈕 ---------------- */
-.slider-btn {
-  position: static;                     /* 靠flex排版即可，不需要單獨定位 */
-  transform: none;
-  background: rgba(190,135,59,0.83);    /* 竹拼品牌色 */
-  border: none;
-  color: #fff;
-  font-size: 1.6em;                     /* 桌機較大，手機會縮小 */
-  border-radius: 50%;
-  width: 40px; height: 40px;
-  cursor: pointer;
-  z-index: 2;
-  opacity: 0.9;
-  transition: background 0.16s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.slider-btn:hover { 
-  background: #be873b; opacity: 1;
-}
-@media (max-width:600px){
-  .slider-btn { 
-    font-size: 1.2em; width: 32px; height: 32px;
-  }
-}
-
-/* ---------------- 輪播中間dot指示器 ---------------- */
-.slider-dots {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.slider-dot {
-  display: inline-block;
-  width: 13px; height: 13px;
-  border-radius: 50%;
-  background: #e2d6c2;
-  margin: 0 2px;
-  cursor: pointer;
-  border: 2px solid #be873b;
-  transition: background 0.18s, border 0.18s;
-}
-.slider-dot.active {
-  background: #be873b;
-  border: 2px solid #be873b;
-}
-@media (max-width:600px){
-  .slider-dot { width: 10px; height: 10px; }
-}
-/* --------- End 滑動輪播 --------- */
-    /* 返回按鈕外觀與定位 */
-    .backbtn {
+    /* --------- 滑動輪播(共用) --------- */
+    .slider-container {
+      width: 100%;
+      max-width: 750px;
+      margin: 0 auto 28px auto;
+      overflow: hidden;
+      position: relative;
+      border-radius: 24px;
+      box-shadow: 0 2px 14px #0003;
       background: #fff;
-      color: #222;
-      display: inline-block;
-      padding: 10px 26px;
-      border-radius: 18px;
-      font-weight: bold;
-      font-size: 1.08em;
-      letter-spacing: 2px;
-      border: none;
-      outline: none;
-      text-decoration: none;
-      box-shadow: 0 2px 6px #0001;
-      border: 1.5px solid #be873b;
-      transition: background 0.18s, color 0.18s;
+      padding-bottom: 55px; /* 桌機底部空間 */
     }
-    .backbtn:hover, .backbtn:focus {
-      background: #be873b;
-      color: #fff;
+
+    /* 手機：上排（左右箭頭+點點）＋ 下排（返回↑靠右） */
+    @media (max-width:600px){
+      .slider-container {
+        width: 100vw !important; max-width: 100vw !important;
+        margin-left: calc(-50vw + 50%) !important;
+        border-radius: 0;
+        padding-bottom: 96px !important; /* 給上排 + 下排↑ */
+        aspect-ratio: 4 / 3;
+        height: auto !important; min-height: unset !important;
+        position: relative;
+      }
+      .slide img, .slide video {
+        width: 100% !important; height: 100% !important; object-fit: cover;
+        border-radius: 0 !important; display: block;
+      }
+      .slider-controls { bottom: 56px !important; gap: 10px; }
+      .slider-dot { width: 9px !important; height: 9px !important; margin: 0 1px !important; }
     }
+
+    /* 輪播內容排列 */
+    .slider-wrapper { display: flex; transition: transform 0.35s cubic-bezier(.45,.1,.57,1.1); will-change: transform; }
+    .slide { min-width: 100%; box-sizing: border-box; text-align: center; }
+
+    /* 控制列（左右箭頭＋中間點點） */
+    .slider-controls {
+      position: absolute; left: 0; right: 0; bottom: 10px;
+      width: 100%; display: flex; align-items: center; justify-content: center; gap: 16px; margin: 0;
+      z-index: 3;
+    }
+    @media (max-width:600px){ .slider-controls { bottom: 8px; gap: 10px; } }
+
+    /* 左右箭頭 */
+    .slider-btn {
+      position: static; transform: none; background: rgba(190,135,59,0.83);
+      border: none; color: #fff; font-size: 1.6em; border-radius: 50%; width: 40px; height: 40px;
+      cursor: pointer; z-index: 2; opacity: 0.9; transition: background 0.16s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .slider-btn:hover { background: #be873b; opacity: 1; }
+    @media (max-width:600px){ .slider-btn { font-size: 1.2em; width: 32px; height: 32px; } }
+
+    /* 點點 */
+    .slider-dots { text-align: center; display: flex; align-items: center; gap: 8px; }
+    .slider-dot {
+      display: inline-block; width: 13px; height: 13px; border-radius: 50%;
+      background: #e2d6c2; margin: 0 2px; cursor: pointer; border: 2px solid #be873b;
+      transition: background 0.18s, border 0.18s;
+    }
+    .slider-dot.active { background: #be873b; border: 2px solid #be873b; }
+    @media (max-width:600px){ .slider-dot { width: 10px; height: 10px; } }
+
+    /* 返回按鈕外觀與定位（單獨一排靠右） */
+    .backbtn {
+      background: #fff; color: #222; display: inline-block; padding: 10px 26px; border-radius: 18px;
+      font-weight: bold; font-size: 1.08em; letter-spacing: 2px; border: none; outline: none; text-decoration: none;
+      box-shadow: 0 2px 6px #0001; border: 1.5px solid #be873b; transition: background 0.18s, color 0.18s;
+    }
+    .backbtn:hover, .backbtn:focus { background: #be873b; color: #fff; }
+
     .slider-backbtn {
-      position: absolute;
-      right: 2px;
-      bottom: -2px;
-      z-index: 10;
-      margin: 0;
+      position: absolute; right: 8px; bottom: -1px; z-index: 10; margin: 0;
+      /* 讓它永遠是「下排」：放在 .slider-container 內、但不在 .slider-controls 內 */
     }
     @media (max-width:600px){
-      .slider-backbtn {
-        right: 8px;
-        bottom: 0;
-        padding: 7px 14px;
-        font-size: 0.97em;
-        border-radius: 14px;
-      }
+      .slider-backbtn { right: 12px; bottom: 10px; padding: 7px 14px; font-size: 0.97em; border-radius: 14px; }
     }
+
     /* 桌機/手機顯示不同返回內容 */
-    .back-mobile {
-      display: none;
-    }
+    .back-mobile { display: none; }
     @media (max-width:600px) {
-      .back-desktop {
-        display: none;
-      }
-      .back-mobile {
-        display: inline;
-        font-size: 1.35em;
-        font-weight: bold;
-        letter-spacing: 2px;
-      }
+      .back-desktop { display: none; }
+      .back-mobile { display: inline; font-size: 1.35em; font-weight: bold; letter-spacing: 2px; }
     }
-    /* 其他共用樣式（如浮動鈕等）省略 */
+
+    /* 其他共用樣式（如浮動鈕等） */
     #backToTop, #floatLineBtn {
-      position: fixed;
-      right: 20px;
-      z-index: 99;
-      width: 60px;
-      height: 60px;
-      border: none;
-      border-radius: 50%;
-      background: rgba(190, 135, 59, 0.87);
-      color: #fff;
-      font-size: 2.1em;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 2px 8px #0002;
-      opacity: 0.7;
-      transition: opacity 0.2s, background 0.2s;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      backdrop-filter: blur(1.5px);
+      position: fixed; right: 20px; z-index: 99; width: 60px; height: 60px; border: none; border-radius: 50%;
+      background: rgba(190, 135, 59, 0.87); color: #fff; font-size: 2.1em; font-weight: bold; cursor: pointer;
+      box-shadow: 0 2px 8px #0002; opacity: 0.7; transition: opacity 0.2s, background 0.2s; display: none;
+      align-items: center; justify-content: center; backdrop-filter: blur(1.5px);
     }
-    #backToTop:hover {
-      background: #be873b;
-      opacity: 1;
-    }
+    #backToTop:hover { background: #be873b; opacity: 1; }
     #backToTop { bottom: 36px; }
     html { scroll-behavior: smooth; }
+
     @media (max-width: 600px) {
       .page img, .page video {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        margin-left: calc(-50vw + 50%);
-        border-radius: 0 !important;
+        width: 100vw !important; max-width: 100vw !important; margin-left: calc(-50vw + 50%); border-radius: 0 !important;
       }
     }
-.logo-img {
-  width: 60px;          /* 你想要的顯示大小，可調整 */
-  height: 60px;
-  display: block;
-  object-fit: contain;  /* 確保內容不會被裁掉 */
-  /* 如果圖片本身就是圓形圖，這一行不需要了：border-radius: 50%; */
-  margin: 0 auto;
-}
-    /* 聯絡我們專屬樣式 */
-.contact-list {
-  max-width: 420px;
-  margin: 40px auto 0 auto;
-  padding: 0;
-  list-style: none;
-}
 
-.contact-list li {
-  margin-bottom: 16px;
-}
+    .logo-img { width: 60px; height: 60px; display: block; object-fit: contain; margin: 0 auto; }
 
-.contact-item {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #fff;
-  border: 1.5px solid #be873b;
-  border-radius: 18px;
-  padding: 0 22px;
-  min-height: 48px;
-  font-size: 1.09em;
-  font-weight: bold;
-  color: #6b4216;
-  text-decoration: none;
-  letter-spacing: 1px;
-  transition: background 0.18s, color 0.18s, border 0.18s;
-  box-shadow: 0 2px 10px #0001;
-}
+    /* 聯絡我們 */
+    .contact-list { max-width: 420px; margin: 40px auto 0 auto; padding: 0; list-style: none; }
+    .contact-list li { margin-bottom: 16px; }
+    .contact-item {
+      display: flex; align-items: center; justify-content: space-between; background: #fff;
+      border: 1.5px solid #be873b; border-radius: 18px; padding: 0 22px; min-height: 48px;
+      font-size: 1.09em; font-weight: bold; color: #6b4216; text-decoration: none; letter-spacing: 1px;
+      transition: background 0.18s, color 0.18s, border 0.18s; box-shadow: 0 2px 10px #0001;
+    }
+    .contact-item:hover, .contact-item:focus { background: #be873b; color: #fff; border-color: #be873b; }
+    .contact-arrow { font-size: 1.38em; color: #be873b; margin-left: 14px; display: flex; align-items: center; }
+    @media (max-width: 600px) {
+      .contact-list { margin: 22px 0 0 0; max-width: 96vw; }
+      .contact-list li { margin-bottom: 10px; }
+      .contact-item { font-size: 0.98em; min-height: 40px; padding: 0 10px; border-radius: 13px; }
+      .contact-arrow { font-size: 1.10em; margin-left: 6px; }
+    }
 
-.contact-item:hover, .contact-item:focus {
-  background: #be873b;
-  color: #fff;
-  border-color: #be873b;
-}
+    #info .infosubnav { text-align: left; }
+    #info .infosubnav .subbtn { margin-left: 0; margin-right: 10px; }
 
-.contact-arrow {
-  font-size: 1.38em;
-  color: #be873b;
-  margin-left: 14px;
-  display: flex;
-  align-items: center;
-}
-
-@media (max-width: 600px) {
-  .contact-list {
-    margin: 22px 0 0 0;
-    max-width: 96vw;
-  }
-  .contact-list li {
-    margin-bottom: 10px;
-  }
-  .contact-item {
-    font-size: 0.98em;
-    min-height: 40px;
-    padding: 0 10px;
-    border-radius: 13px;
-  }
-  .contact-arrow {
-    font-size: 1.10em;
-    margin-left: 6px;
-  }
-}
-#info .infosubnav { text-align: left; }
-#info .infosubnav .subbtn { margin-left: 0; margin-right: 10px; }
-
-.title-with-back {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-.inline-backbtn {
-  border: none;
-  background: none;
-  font-size: 1.15em;
-  color: #be873b;
-  padding: 0 5px 0 0;
-  box-shadow: none;
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  cursor: pointer;
-}
-.inline-backbtn .back-mobile { display: none; }
-.inline-backbtn .back-desktop { display: inline; }
-
-@media (max-width:600px) {
-  .inline-backbtn .back-desktop { display: none; }
-  .inline-backbtn .back-mobile { display: inline; font-size: 1.25em; }
-  #info-mosaic .slider-controls { display: none; }
-}
-
- 
- </style>
+    .title-with-back { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .inline-backbtn { border: none; background: none; font-size: 1.15em; color: #be873b; padding: 0 5px 0 0; box-shadow: none; display: flex; align-items: center; font-weight: bold; cursor: pointer; }
+    .inline-backbtn .back-mobile { display: none; }
+    .inline-backbtn .back-desktop { display: inline; }
+    @media (max-width:600px) {
+      .inline-backbtn .back-desktop { display: none; }
+      .inline-backbtn .back-mobile { display: inline; font-size: 1.25em; }
+      #info-mosaic .slider-controls { display: none; }
+    }
+  </style>
 </head>
 <body>
   <div class="banner-area">
