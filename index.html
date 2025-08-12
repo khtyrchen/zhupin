@@ -219,41 +219,47 @@
   padding-bottom: 55px;           /* 下方多留55px，避免輪播控制列和返回鈕壓到底部 */
 }
 
-/* ---------------- 手機板（<=600px）輪播設定 ---------------- */
+/* ---------------- 手機板（<=600px）輪播設定（上排：箭頭+點點；下排：↑靠右） ---------------- */
 @media (max-width:600px){
   .slider-container { 
-    width: 100vw !important;                    /* 寬度100vw，貼齊螢幕左右兩側 */
-    max-width: 100vw !important;                /* 不可超出螢幕 */
-    margin-left: calc(-50vw + 50%) !important;  /* 解決container居中但又要滿版的技巧 */
-    border-radius: 0;                           /* 手機去掉圓角 */
-    padding-bottom: 96px;                       /* ↑ 增加底部空間：放點點列 + 返回↑ */
-    aspect-ratio: 4 / 3;                        /* 固定長寬比（可改 3/2 或 1/1） */
-    height: auto !important;                    /* 避免被覆蓋 */
-    min-height: unset !important;               /* 完全交由 aspect-ratio 決定 */
+    width: 100vw !important;
+    max-width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    border-radius: 0;
+    /* 留足空間讓上排控制列+下排↑不擋住 */
+    padding-bottom: 96px !important;
+    aspect-ratio: 4 / 3;
+    height: auto !important;
+    min-height: unset !important;
+    position: relative; /* 讓下排↑以容器為定位基準 */
   }
 
   .slide img, .slide video {
-    width: 100% !important;                     /* 充滿slider區塊寬度 */
-    height: 100% !important;                    /* 充滿slider區塊高度（搭配aspect-ratio） */
-    object-fit: cover;                          /* 裁切填滿、圖片不變形 */
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
     border-radius: 0 !important;
     display: block;
   }
 
-  /* 控制列（左右箭頭＋點點）往上移，讓出空間給返回↑ */
+  /* 上排（左右箭頭＋點點）維持不變，只是整排往上抬，給下面↑留位置 */
   .slider-controls {
-    bottom: 56px !important;                    /* 原本 8px */
-    gap: 10px;                                  /* 手機間距 */
+    bottom: 56px !important;   /* 視需要可調 48~72px */
+    gap: 10px;
   }
 
-  /* 返回↑固定在容器最底右側，不與點點重疊 */
+  /* 下排：返回↑固定在容器最底右側，單獨一排 */
   .slider-backbtn {
-    right: 12px !important;
-    bottom: 8px !important;
-    z-index: 10;                                 /* 以防被遮住 */
+    position: absolute !important;  /* 關鍵：獨立於上排控制列 */
+    right: 12px !important;         /* 靠右 */
+    bottom: 10px !important;        /* 靠底 */
+    z-index: 10;                    /* 以防被遮住 */
+    padding: 6px 12px;
+    font-size: 0.9em;
+    border-radius: 12px;
   }
 
-  /* 點點縮小，圖片多時較不擁擠 */
+  /* 點點略縮小，圖片多時不擁擠（可調整或拿掉） */
   .slider-dot {
     width: 9px !important;
     height: 9px !important;
@@ -1251,6 +1257,7 @@
 <div id="info-ruler" class="subsection">
   <div class="infosubnav">
     <h2>15公分木尺</h2>
+    <h2>六種款式可直接選購,或者來圖客製專屬於你的木尺</h2>
       <a href="#price-ruler-Public" class="subbtn">可選樣式</a>
       <a href="#price-ruler" class="subbtn">價格計算方式</a>
       <a href="#process-ruler" class="subbtn">訂製流程</a>
