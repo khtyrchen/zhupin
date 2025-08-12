@@ -626,6 +626,7 @@
       <h2>客製木製品</h2>
       <a href="#keychainQ" class="subbtn">Q版木鑰匙圈</a>
       <a href="#graduate" class="subbtn">畢業祝福木鑰匙圈</a>
+      <a href="#ruler" class="subbtn">15公分木尺</a>
     </div>
     <!-- =============== Q版木鑰匙圈 =============== -->
     <div id="keychainQ" class="subsection">
@@ -658,6 +659,32 @@
           <div class="slide"><img src="024.jpg" alt="畢業祝福木鑰匙圈介紹2" style="width:100%;border-radius:24px;"></div>
           <div class="slide"><img src="025.jpg" alt="畢業祝福木鑰匙圈介紹3" style="width:100%;border-radius:24px;"></div>
           <div class="slide"><img src="026.jpg" alt="畢業祝福木鑰匙圈介紹4" style="width:100%;border-radius:24px;"></div>
+        </div>
+        <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
+        <div class="slider-controls">
+          <button class="slider-btn prev">&#8592;</button>
+          <div class="slider-dots"></div>
+          <button class="slider-btn next">&#8594;</button>
+          <a href="#lamp" class="backbtn slider-backbtn">
+             <span class="back-desktop">返回</span>
+             <span class="back-mobile">↑</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- =============== 15公分木尺 =============== -->
+    <div id="ruler" class="subsection">
+      <h2>15公分木尺</h2>
+      <div class="slider-container" id="slider-ruler">
+        <div class="slider-wrapper">
+          <div class="slide"><img src="110.jpg" alt="15公分木尺介紹1" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="111.jpg" alt="15公分木尺介紹2" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="104.jpg" alt="15公分木尺介紹3" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="105.jpg" alt="15公分木尺介紹4" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="106.jpg" alt="15公分木尺介紹5" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="107.jpg" alt="15公分木尺介紹6" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="108.jpg" alt="15公分木尺介紹7" style="width:100%;border-radius:24px;"></div>
+          <div class="slide"><img src="109.jpg" alt="15公分木尺介紹8" style="width:100%;border-radius:24px;"></div>
         </div>
         <!-- 控制區塊（左右箭頭＋圓點＋返回鈕） -->
         <div class="slider-controls">
@@ -1509,7 +1536,7 @@ window.onload = function() {
         // 產品介紹子分類，包含：miniBrick、mosaic、code、keychain、lamp、keychainQ、graduate、bracelet、snake、bottle、pendant、bone...
         [
           'miniBrick','mosaic','code','keychain','lamp','keychainQ','graduate','bracelet',
-          'snake','bottle','pendant','bone','otherWood'
+          'snake','bottle','pendant','bone','otherWood','ruler'
         ].includes(hash)
       ) {
         tabs.forEach(t => t.classList.remove('active'));
@@ -1608,6 +1635,7 @@ window.onload = function() {
       makeSlider('slider-keychain');
       makeSlider('slider-keychainQ');
       makeSlider('slider-graduate');
+      makeSlider('slider-ruler');
       makeSlider('slider-snake');
       makeSlider('slider-bottle');
       makeSlider('slider-pendant');
